@@ -1,0 +1,16 @@
+{
+  "duration": 9,
+  "shots": [
+    {"t0": 0, "t1": 3, "earth": {"pos": [0, 0, 0], "scale": 1.0, "spin": 0.35, "tilt": 0.2},
+      "camera": [{"t": 0, "pos": [-2.0, 1.0, 4.6], "look": [0, 0, 0], "fov": 40, "roll": 0.12}, {"t": 3, "pos": [1.2, 0.1, 3.4], "look": [0, 0, 0], "fov": 40, "roll": -0.06}]},
+    {"t0": 3, "t1": 6, "cutFlash": true, "earth": {"pos": [0, 0, 0], "scale": 1.0, "spin": 0.15, "tilt": 0.0}, "field": true,
+      "camera": [{"t": 0, "pos": [0, 0.2, 13], "look": [0, 0, 0], "fov": 42}, {"t": 3, "pos": [3, 2, 10], "look": [0, 0, 0], "fov": 42}]},
+    {"t0": 6, "t1": 9, "cutFlash": true, "earth": {"pos": [3.2, -4.2, 0], "scale": 3.6, "spin": 0.1, "tilt": 0.1, "rot": 2.0}, "sun": {"pos": [-4.2, 6.6, -12], "scale": 1.5}, "streaks": true,
+      "camera": [{"t": 0, "pos": [0, 0, 10], "look": [0, 0.5, 0], "fov": 46}, {"t": 3, "pos": [0.5, 0.5, 7.5], "look": [-0.5, 0.5, 0], "fov": 46}]}
+  ],
+  "captions": [
+    {"t0": 0.0, "t1": 1.4, "text": "If Earth stopped"}, {"t0": 1.4, "t1": 3.0, "text": "spinning"},
+    {"t0": 3.0, "t1": 4.5, "text": "the magnetic field"}, {"t0": 4.5, "t1": 6.0, "text": "would keep working"},
+    {"t0": 6.0, "t1": 7.5, "text": "but the Sun"}, {"t0": 7.5, "t1": 9.0, "text": "would quickly fry"}
+  ]
+}

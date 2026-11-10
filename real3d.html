@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script></head>
+<body><canvas id="gl"></canvas><canvas id="out"></canvas>
+<script type="module">
+import * as THREE from 'three';
+const W = 720, H = 1280;
+const gl = document.getElementById('gl'), out = document.getElementById('out'); gl.width = out.width = W; gl.height = out.height = H;
+const ctx = out.getContext('2d');
+const renderer = new THREE.WebGLRenderer({ canvas: gl, antialias: true, preserveDrawingBuffer: true });
+renderer.setSize(W, H, false); renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0x000000);
+const cam = new THREE.PerspectiveCamera(38, W / H, 0.1, 2000);
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x)), lerp = (a, b, t) => a + (b - a) * t, sm = (t) => { t = clamp(t); return t * t * (3 - 2 * t); };
+const rng = (s) => () => { s |= 0; s = (s + 0x6D2B79F5) | 0; let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+const loader = new THREE.TextureLoader();
+const tex = (f, srgb = true) => new Promise((r) => loader.load('/tex/' + f, (t) => { if (srgb) t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; r(t); }));
+const [dayT, bumpT, waterT, cloudT, nightT] = await Promise.all([tex('earth-blue-marble.jpg'), tex('earth-topology.png', false), tex('earth-water.png', false), tex('clouds.png'), tex('earth-night.jpg')]);
+
+function glowTex(c0, c1 = 'rgba(0,0,0,0)') { const c = document.createElement('canvas'); c.width = c.height = 256; const x = c.getContext('2d'); const g = x.createRadialGradient(128, 128, 0, 128, 128, 128); g.addColorStop(0, c0); g.addColorStop(0.35, c0.replace(/[\d.]+\)$/, '0.35)')); g.addColorStop(1, c1); x.fillStyle = g; x.fillRect(0, 0, 256, 256); return new THREE.CanvasTexture(c); }
+
+// ---- Earth (realistic): day map, bump, specular oceans, clouds, atmosphere
+function makeEarth() {
+  const g = new THREE.Group();
+  const body = new THREE.Mesh(new THREE.SphereGeometry(1, 128, 96), new THREE.MeshPhongMaterial({ map: dayT, bumpMap: bumpT, bumpScale: 0.03, specularMap: waterT, specular: new THREE.Color(0x3a5a80), shininess: 22 }));
+  const clouds = new THREE.Mesh(new THREE.SphereGeometry(1.012, 96, 64), new THREE.MeshPhongMaterial({ map: cloudT, transparent: true, opacity: 0.8, depthWrite: false }));
+  const atmo = new THREE.Mesh(new THREE.SphereGeometry(1.08, 96, 64), new THREE.ShaderMaterial({
+    transparent: true, side: THREE.BackSide, blending: THREE.AdditiveBlending, depthWrite: false,
+    uniforms: { c: { value: new THREE.Color(0x4aa8ff) } },
+    vertexShader: 'varying vec3 vN; varying vec3 vP; void main(){ vN=normalize(normalMatrix*normal); vP=(modelViewMatrix*vec4(position,1.)).xyz; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
+    fragmentShader: 'uniform vec3 c; varying vec3 vN; varying vec3 vP; void main(){ float i=pow(0.72-dot(vN,vec3(0.,0.,1.)),3.2); gl_FragColor=vec4(c,1.)*clamp(i,0.,1.)*0.7;}' }));
+  const rim = new THREE.Mesh(new THREE.SphereGeometry(1.03, 96, 64), new THREE.ShaderMaterial({
+    transparent: true, blending: THREE.AdditiveBlending, depthWrite: false,
+    uniforms: { c: { value: new THREE.Color(0x5ab4ff) } },
+    vertexShader: 'varying vec3 vN; void main(){ vN=normalize(normalMatrix*normal); gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
+    fragmentShader: 'uniform vec3 c; varying vec3 vN; void main(){ float i=pow(1.0-abs(dot(vN,vec3(0.,0.,1.))),3.0); gl_FragColor=vec4(c,1.)*i*0.45;}' }));
+  g.add(body, clouds, atmo, rim); g.userData = { body, clouds }; g.rotation.z = 0.41; return g;
+}
+// ---- Sun: textured fire sphere + red/orange glow
+function makeSun(col = 0xff5a1e) {
+  const g = new THREE.Group();
+  const c = document.createElement('canvas'); c.width = 512; c.height = 256; const x = c.getContext('2d'); const r = rng(5);
+  x.fillStyle = '#ff9a1e'; x.fillRect(0, 0, 512, 256);
+  for (let i = 0; i < 900; i++) { x.fillStyle = `rgba(${r() < 0.5 ? '255,220,90' : '200,60,10'},${0.15 + r() * 0.3})`; x.beginPath(); x.ellipse(r() * 512, r() * 256, 3 + r() * 14, 2 + r() * 9, r() * 3, 0, 7); x.fill(); }
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace;
+  const body = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 48), new THREE.MeshBasicMaterial({ map: t }));
+  const hex = '#' + new THREE.Color(col).getHexString();
+  const rgb = new THREE.Color(col); const rgba = (a) => `rgba(${Math.round(rgb.r * 255)},${Math.round(rgb.g * 255)},${Math.round(rgb.b * 255)},${a})`;
+  const glow = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex(rgba(0.95)), blending: THREE.AdditiveBlending, transparent: true, depthWrite: false })); glow.scale.setScalar(9);
+  const glow2 = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex(rgba(0.35)), blending: THREE.AdditiveBlending, transparent: true, depthWrite: false })); glow2.scale.setScalar(12);
+  g.add(body, glow, glow2); g.userData = { body }; return g;
+}
+// ---- Stars (round, varied)
+function makeStars() {
+  const r = rng(3), n = 2200, a = new Float32Array(n * 3), s = new Float32Array(n);
+  for (let i = 0; i < n; i++) { const th = r() * 6.283, ph = Math.acos(2 * r() - 1), R = 400 + r() * 300; a[i * 3] = R * Math.sin(ph) * Math.cos(th); a[i * 3 + 1] = R * Math.cos(ph); a[i * 3 + 2] = R * Math.sin(ph) * Math.sin(th); s[i] = r(); }
+  const geo = new THREE.BufferGeometry(); geo.setAttribute('position', new THREE.BufferAttribute(a, 3));
+  return new THREE.Points(geo, new THREE.PointsMaterial({ map: glowTex('rgba(255,255,255,1)'), size: 2.6, sizeAttenuation: true, transparent: true, depthWrite: false, alphaTest: 0.02 }));
+}
+// ---- Magnetic field lines: dipole loops with glowing travelling pulses
+function makeField() {
+  const g = new THREE.Group(); const lines = [];
+  const mk = (L, ph, col) => {
+    const pts = []; for (let i = 0; i <= 120; i++) { const lat = -1.5 + 3 * i / 120; const r = L * Math.cos(lat) ** 2; pts.push(new THREE.Vector3(r * Math.cos(lat) * Math.cos(ph), r * Math.sin(lat), r * Math.cos(lat) * Math.sin(ph))); }
+    const geo = new THREE.BufferGeometry().setFromPoints(pts);
+    const ln = new THREE.Line(geo, new THREE.LineBasicMaterial({ color: col, transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending, depthWrite: false })); g.add(ln);
+    const dots = new THREE.Points(new THREE.BufferGeometry().setFromPoints(pts.filter((_, i) => i % 1 == 0)), new THREE.PointsMaterial({ map: glowTex('rgba(255,255,255,1)'), size: 0.07, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, color: col === 0x5ab4ff ? 0xaadcff : 0xff9a8a })); g.add(dots);
+    lines.push({ pts, dots, col });
+  };
+  for (const L of [1.7, 2.1, 2.6, 3.2, 3.9, 4.8]) for (const ph of [0.0, Math.PI, 0.5, Math.PI + 0.5]) mk(L, ph, L > 3 ? 0xff6a5a : 0x5ab4ff);
+  g.userData = { lines }; return g;
+}
+// ---- solar particle streaks flying toward a target
+function makeStreaks(n = 260) {
+  const r = rng(11), geo = new THREE.BufferGeometry(), pos = new Float32Array(n * 6), seed = [];
+  for (let i = 0; i < n; i++) seed.push({ a: r() * 6.28, d: r() * 0.35, sp: 0.6 + r() * 0.8, ph: r(), len: 0.5 + r() * 1.1 });
+  geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const m = new THREE.LineSegments(geo, new THREE.LineBasicMaterial({ color: 0xffa060, transparent: true, opacity: 0.8, blending: THREE.AdditiveBlending, depthWrite: false }));
+  m.userData = { seed, pos, geo }; m.frustumCulled = false; return m;
+}
+function updateStreaks(m, t, from, to) {
+  const { seed, pos, geo } = m.userData; const dir = new THREE.Vector3().subVectors(to, from); const L = dir.length(); dir.normalize();
+  const u = new THREE.Vector3(0, 1, 0).cross(dir).normalize(), v = dir.clone().cross(u);
+  seed.forEach((s, i) => { const k = (t * s.sp * 0.5 + s.ph) % 1; const spread = k * 2.4 * s.d * 3 + 0.2; const c = from.clone().addScaledVector(dir, k * L).addScaledVector(u, Math.cos(s.a) * spread).addScaledVector(v, Math.sin(s.a) * spread); const e = c.clone().addScaledVector(dir, -s.len); pos.set([c.x, c.y, c.z, e.x, e.y, e.z], i * 6); });
+  geo.attributes.position.needsUpdate = true;
+}
+
+const stars = makeStars(); scene.add(stars);
+const earth = makeEarth(); scene.add(earth);
+const field = makeField(); scene.add(field);
+const sun = makeSun(); scene.add(sun);
+const streaks = makeStreaks(); scene.add(streaks);
+const sunLight = new THREE.DirectionalLight(0xfff2e0, 3.2); scene.add(sunLight); scene.add(new THREE.AmbientLight(0x223355, 0.55));
+
+let S;
+window.loadScene = (s) => { S = s; window.ready = true; };
+const kfi = (kf, t, key) => { if (t <= kf[0].t) return kf[0][key]; for (let i = 0; i < kf.length - 1; i++) { const a = kf[i], b = kf[i + 1]; if (t <= b.t) { const k = sm((t - a.t) / (b.t - a.t)); return Array.isArray(a[key]) ? a[key].map((v, j) => lerp(v, b[key][j], k)) : lerp(a[key], b[key], k); } } return kf[kf.length - 1][key]; };
+
+window.renderFrame = (t) => {
+  // find the active shot
+  const shot = S.shots.find((s) => t >= s.t0 && t < s.t1) || S.shots[S.shots.length - 1];
+  const lt = t - shot.t0;
+  // reset visibility
+  earth.visible = shot.earth !== undefined; field.visible = !!shot.field; sun.visible = !!shot.sun; streaks.visible = !!shot.streaks;
+  if (shot.earth) { earth.position.set(...shot.earth.pos); earth.scale.setScalar(shot.earth.scale); const sp = shot.earth.spin ?? 0.12; earth.userData.body.rotation.y = 1.6 + t * sp + (shot.earth.rot || 0); earth.userData.clouds.rotation.y = 1.6 + t * sp * 1.25; earth.rotation.x = shot.earth.tilt ?? 0.15; }
+  if (shot.field) { field.position.copy(earth.position); field.scale.setScalar(shot.earth.scale); field.rotation.z = 0.41 * 0; field.userData.lines.forEach((L, li) => { const n = L.pts.length; const a = L.dots.geometry.attributes.position; for (let i = 0; i < n; i++) { /* static positions */ } L.dots.material.opacity = 0.9; }); field.children.forEach((c, i) => { if (c.isLine) c.material.opacity = clamp(lt / 0.8 - i * 0.004) * 0.85; });
+    const k = clamp(lt / 1.2); field.scale.multiplyScalar(0.6 + 0.4 * sm(k)); }
+  if (shot.sun) { sun.position.set(...shot.sun.pos); sun.scale.setScalar(shot.sun.scale); sun.userData.body.rotation.y = t * 0.15; sunLight.position.copy(sun.position); sunLight.color.set(shot.sun.light ?? 0xfff2e0); }
+  else sunLight.position.set(-6, 3, 8);
+  if (shot.streaks) updateStreaks(streaks, t, new THREE.Vector3(...shot.sun.pos), new THREE.Vector3(...shot.earth.pos));
+  // camera
+  const kf = shot.camera.map((c) => ({ ...c, t: c.t + shot.t0 }));
+  const p = kfi(kf, t, 'pos'), l = kfi(kf, t, 'look'), f = kfi(kf, t, 'fov'); const roll = 'roll' in kf[0] ? kfi(kf, t, 'roll') : 0;
+  cam.position.set(...p); cam.fov = f; cam.updateProjectionMatrix(); cam.lookAt(...l); cam.rotateZ(roll);
+  stars.rotation.y = t * 0.004;
+  renderer.render(scene, cam);
+  ctx.drawImage(gl, 0, 0);
+  // cut flash
+  const fl = clamp(1 - lt / 0.12) * (shot.cutFlash ? 0.5 : 0); if (fl) { ctx.fillStyle = `rgba(255,255,255,${fl})`; ctx.fillRect(0, 0, W, H); }
+  // captions: plain bold white, lower third, like the reference
+  for (const c of S.captions) { if (t < c.t0 || t > c.t1) continue; const size = 62; ctx.save(); ctx.font = `700 ${size}px "DejaVu Sans", Verdana, Arial, sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; ctx.shadowColor = 'rgba(0,0,0,0.9)'; ctx.shadowBlur = 8; ctx.shadowOffsetY = 3; ctx.lineWidth = 10; ctx.strokeStyle = 'rgba(0,0,0,0.85)'; ctx.fillStyle = c.color || '#fff'; const y = H * 0.76; ctx.strokeText(c.text, W / 2 - 30, y); ctx.fillText(c.text, W / 2 - 30, y); ctx.restore(); }
+};
+window.loaded = true;
+</script></body></html>
