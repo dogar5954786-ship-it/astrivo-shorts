@@ -19,16 +19,19 @@
     "what if",
     "shorts"
    ],
-   "status": "approved",
+   "status": "uploaded",
    "publish_at": "2026-11-11T23:06:00+05:00",
    "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/test-2026-11-11-1.mp4",
-   "seconds": 34.5
+   "seconds": 34.5,
+   "youtube_id": "Rsd2UKgZKUQ",
+   "youtube_url": "https://youtube.com/shorts/Rsd2UKgZKUQ"
   }
  ],
  "review_thread_id": "1a1cb8dd1486be2d",
  "log": [
   "2026-11-11T22:03+05:00 test review email sent (link only, file was 28MB)",
-  "2026-11-11T23:06+05:00 \"approve now\" from Abdullah (msg 1a1cb9c43d35914e) -> job 1 approved"
+  "2026-11-11T23:06+05:00 \"approve now\" from Abdullah (msg 1a1cb9c43d35914e) -> job 1 approved",
+  "2026-11-11T23:06+05:00 uploaded job 1 to YouTube: https://youtube.com/shorts/Rsd2UKgZKUQ"
  ],
  "seen_msgs": [
   "1a1cb9c43d35914e"
