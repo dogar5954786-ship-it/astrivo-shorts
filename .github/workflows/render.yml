@@ -1,0 +1,54 @@
+# Renders every new job in jobs/<id>/job.json into a Short and publishes it as a
+# release asset:  https://github.com/<owner>/<repo>/releases/download/videos/<id>.mp4
+name: Render Shorts
+on:
+  push:
+    paths: ["jobs/**/job.json"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: render
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Install tools
+        run: |
+          npm install --no-audit --no-fund
+          pip install --quiet faster-whisper
+          sudo apt-get install -y -qq fonts-dejavu-core ffmpeg >/dev/null
+      - name: Render pending jobs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view videos >/dev/null 2>&1 || gh release create videos --title "Rendered Shorts" --notes "Auto-rendered videos"
+          for d in jobs/*/; do
+            id=$(basename "$d")
+            [ -f "$d/job.json" ] || continue
+            [ -f "$d/result.json" ] && continue
+            echo "::group::Render $id"
+            if python3 tools/build_job.py "$d"; then
+              gh release upload videos "out/$id.mp4" --clobber
+              url="https://github.com/${GITHUB_REPOSITORY}/releases/download/videos/$id.mp4"
+              python3 -c "import json,sys;p=sys.argv[1];r=json.load(open(p));r['url']=sys.argv[2];json.dump(r,open(p,'w'),indent=1)" "$d/result.json" "$url"
+            else
+              echo "{\"status\": \"failed\", \"id\": \"$id\", \"log\": \"${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" > "$d/result.json"
+            fi
+            echo "::endgroup::"
+          done
+      - name: Save results
+        run: |
+          git config user.name "astrivo-bot"
+          git config user.email "astrivo-bot@users.noreply.github.com"
+          git add jobs/*/result.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Render results"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done

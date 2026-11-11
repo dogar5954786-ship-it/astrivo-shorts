@@ -85,11 +85,54 @@ function updateStreaks(m, t, from, to) {
   geo.attributes.position.needsUpdate = true;
 }
 
+// ---- procedural canvas texture helper
+function canvasTex(w, h, draw) { const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; }
+// ---- Moon: grey cratered sphere
+function makeMoon() {
+  const r = rng(21);
+  const t = canvasTex(1024, 512, (x, w, h) => { x.fillStyle = '#9a9a96'; x.fillRect(0, 0, w, h);
+    x.filter = 'blur(10px)'; for (let i = 0; i < 26; i++) { x.fillStyle = `rgba(55,55,58,${0.25 + r() * 0.3})`; x.beginPath(); x.ellipse(r() * w, h * 0.2 + r() * h * 0.6, 30 + r() * 110, 20 + r() * 70, r() * 3, 0, 7); x.fill(); } x.filter = 'none';
+    for (let i = 0; i < 2500; i++) { x.fillStyle = `rgba(${r() < 0.5 ? '255,255,250' : '40,40,40'},${0.04 + r() * 0.06})`; x.fillRect(r() * w, r() * h, 2 + r() * 4, 2 + r() * 4); }
+    for (let i = 0; i < 420; i++) { const cx = r() * w, cy = r() * h, R = 1.5 + r() ** 3 * 18; const g = x.createRadialGradient(cx - R * 0.2, cy - R * 0.2, R * 0.1, cx, cy, R); g.addColorStop(0, 'rgba(60,60,60,0.35)'); g.addColorStop(0.75, 'rgba(90,90,90,0.15)'); g.addColorStop(0.92, 'rgba(225,225,220,0.35)'); g.addColorStop(1, 'rgba(0,0,0,0)'); x.fillStyle = g; x.beginPath(); x.arc(cx, cy, R, 0, 7); x.fill(); } });
+  const m = new THREE.Mesh(new THREE.SphereGeometry(1, 96, 64), new THREE.MeshPhongMaterial({ map: t, bumpMap: t, bumpScale: 0.02, shininess: 2 }));
+  const g = new THREE.Group(); g.add(m); g.userData = { body: m }; return g;
+}
+// ---- Generic planet: rocky (noise) or gas (bands), optional rings
+const planetCache = {};
+function planetMat(color, type) {
+  const key = color + type; if (planetCache[key]) return planetCache[key]; const r = rng(color.length * 7 + type.length); const base = new THREE.Color(color);
+  const t = canvasTex(1024, 512, (x, w, h) => { x.fillStyle = color; x.fillRect(0, 0, w, h);
+    if (type === 'gas') { for (let y = 0; y < h; y += 4 + r() * 18) { const c = base.clone().offsetHSL((r() - 0.5) * 0.04, 0, (r() - 0.5) * 0.25); x.fillStyle = '#' + c.getHexString(); x.globalAlpha = 0.6; x.fillRect(0, y, w, 6 + r() * 22); } x.globalAlpha = 1; }
+    else { for (let i = 0; i < 1400; i++) { const c = base.clone().offsetHSL(0, 0, (r() - 0.5) * 0.3); x.fillStyle = '#' + c.getHexString(); x.globalAlpha = 0.25 + r() * 0.3; x.beginPath(); x.ellipse(r() * w, r() * h, 4 + r() * 40, 3 + r() * 25, r() * 3, 0, 7); x.fill(); } x.globalAlpha = 1; } });
+  return (planetCache[key] = new THREE.MeshPhongMaterial({ map: t, bumpMap: type === 'gas' ? null : t, bumpScale: 0.02, shininess: 6 }));
+}
+function makePlanet() {
+  const g = new THREE.Group(); const body = new THREE.Mesh(new THREE.SphereGeometry(1, 96, 64), planetMat('#c1440e', 'rocky'));
+  const ringT = canvasTex(512, 16, (x, w, h) => { for (let i = 0; i < w; i++) { const a = 0.15 + 0.6 * Math.abs(Math.sin(i * 0.11) * Math.sin(i * 0.031)); x.fillStyle = `rgba(225,205,165,${a})`; x.fillRect(i, 0, 1, h); } });
+  const ringGeo = new THREE.RingGeometry(1.4, 2.4, 128, 1); const pos = ringGeo.attributes.position, uv = ringGeo.attributes.uv; for (let i = 0; i < pos.count; i++) { const v = new THREE.Vector3().fromBufferAttribute(pos, i); uv.setXY(i, (v.length() - 1.4) / 1.0, 0.5); }
+  const ring = new THREE.Mesh(ringGeo, new THREE.MeshBasicMaterial({ map: ringT, transparent: true, side: THREE.DoubleSide, depthWrite: false })); ring.rotation.x = -Math.PI / 2 + 0.35;
+  g.add(body, ring); g.userData = { body, ring }; return g;
+}
+// ---- Black hole: dark core, glowing accretion disk, lensing halo
+function makeBlackHole() {
+  const g = new THREE.Group();
+  const core = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 48), new THREE.MeshBasicMaterial({ color: 0x000000 }));
+  const diskT = canvasTex(512, 16, (x, w) => { for (let i = 0; i < w; i++) { const k = i / w; const a = Math.pow(1 - k, 1.6) * (0.75 + 0.25 * Math.sin(i * 0.5)); x.fillStyle = `rgba(255,${Math.round(110 + 110 * (1 - k))},${Math.round(30 + 110 * (1 - k))},${a})`; x.fillRect(i, 0, 1, 16); } });
+  const dg = new THREE.RingGeometry(1.25, 4.2, 160, 1); const pos = dg.attributes.position, uv = dg.attributes.uv; for (let i = 0; i < pos.count; i++) { const v = new THREE.Vector3().fromBufferAttribute(pos, i); uv.setXY(i, (v.length() - 1.25) / 2.95, 0.5); }
+  const disk = new THREE.Mesh(dg, new THREE.MeshBasicMaterial({ map: diskT, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false })); disk.rotation.x = -Math.PI / 2 + 0.28;
+  const haloT = canvasTex(256, 8, (x, w) => { for (let i = 0; i < w; i++) { const k = i / w; const a = k < 0.06 ? 1 : Math.pow(1 - k, 2.2) * 0.7; x.fillStyle = `rgba(255,${Math.round(190 + 50 * (1 - k))},${Math.round(120 + 80 * (1 - k))},${a})`; x.fillRect(i, 0, 1, 8); } });
+  const hg = new THREE.RingGeometry(1.0, 1.9, 128, 1); { const pp = hg.attributes.position, uu = hg.attributes.uv; for (let i = 0; i < pp.count; i++) { const v = new THREE.Vector3().fromBufferAttribute(pp, i); uu.setXY(i, (v.length() - 1.0) / 0.9, 0.5); } }
+  const halo = new THREE.Mesh(hg, new THREE.MeshBasicMaterial({ map: haloT, transparent: true, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false }));
+  const glow = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex('rgba(255,140,60,0.35)'), blending: THREE.AdditiveBlending, transparent: true, depthWrite: false })); glow.scale.setScalar(6);
+  g.add(glow, halo, core, disk); core.renderOrder = 1; disk.renderOrder = 2; g.userData = { disk, halo }; return g;
+}
+
 const stars = makeStars(); scene.add(stars);
 const earth = makeEarth(); scene.add(earth);
 const field = makeField(); scene.add(field);
 const sun = makeSun(); scene.add(sun);
 const streaks = makeStreaks(); scene.add(streaks);
+const moon = makeMoon(); scene.add(moon); const planet = makePlanet(); scene.add(planet); const bh = makeBlackHole(); scene.add(bh);
 const sunLight = new THREE.DirectionalLight(0xfff2e0, 3.2); scene.add(sunLight); scene.add(new THREE.AmbientLight(0x223355, 0.55));
 
 let S;
@@ -101,7 +144,10 @@ window.renderFrame = (t) => {
   const shot = S.shots.find((s) => t >= s.t0 && t < s.t1) || S.shots[S.shots.length - 1];
   const lt = t - shot.t0;
   // reset visibility
-  earth.visible = shot.earth !== undefined; field.visible = !!shot.field; sun.visible = !!shot.sun; streaks.visible = !!shot.streaks;
+  earth.visible = shot.earth !== undefined; field.visible = !!shot.field; sun.visible = !!shot.sun; streaks.visible = !!shot.streaks; moon.visible = !!shot.moon; planet.visible = !!shot.planet; bh.visible = !!shot.blackhole;
+  if (shot.moon) { moon.position.set(...shot.moon.pos); moon.scale.setScalar(shot.moon.scale); moon.userData.body.rotation.y = t * (shot.moon.spin ?? 0.05); }
+  if (shot.planet) { const P = shot.planet; planet.position.set(...P.pos); planet.scale.setScalar(P.scale); planet.userData.body.material = planetMat(P.color || '#c1440e', P.type || 'rocky'); planet.userData.body.rotation.y = t * (P.spin ?? 0.1); planet.userData.ring.visible = !!P.rings; }
+  if (shot.blackhole) { bh.position.set(...shot.blackhole.pos); bh.scale.setScalar(shot.blackhole.scale); bh.userData.disk.rotation.z = -t * 0.6; bh.lookAt(cam.position); bh.userData.disk.rotation.x = -Math.PI / 2 + 0.28; }
   if (shot.earth) { earth.position.set(...shot.earth.pos); earth.scale.setScalar(shot.earth.scale); const sp = shot.earth.spin ?? 0.12; earth.userData.body.rotation.y = 1.6 + t * sp + (shot.earth.rot || 0); earth.userData.clouds.rotation.y = 1.6 + t * sp * 1.25; earth.rotation.x = shot.earth.tilt ?? 0.15; }
   if (shot.field) { field.position.copy(earth.position); field.scale.setScalar(shot.earth.scale); field.rotation.z = 0.41 * 0; field.userData.lines.forEach((L, li) => { const n = L.pts.length; const a = L.dots.geometry.attributes.position; for (let i = 0; i < n; i++) { /* static positions */ } L.dots.material.opacity = 0.9; }); field.children.forEach((c, i) => { if (c.isLine) c.material.opacity = clamp(lt / 0.8 - i * 0.004) * 0.85; });
     const k = clamp(lt / 1.2); field.scale.multiplyScalar(0.6 + 0.4 * sm(k)); }
@@ -111,14 +157,17 @@ window.renderFrame = (t) => {
   // camera
   const kf = shot.camera.map((c) => ({ ...c, t: c.t + shot.t0 }));
   const p = kfi(kf, t, 'pos'), l = kfi(kf, t, 'look'), f = kfi(kf, t, 'fov'); const roll = 'roll' in kf[0] ? kfi(kf, t, 'roll') : 0;
-  cam.position.set(...p); cam.fov = f; cam.updateProjectionMatrix(); cam.lookAt(...l); cam.rotateZ(roll);
+  const punch = shot.punch ? 1 + 0.45 * Math.pow(1 - clamp(lt / 0.45), 3) : 1; cam.position.set(...p); cam.fov = f * punch; cam.updateProjectionMatrix(); cam.lookAt(...l); cam.rotateZ(roll); if (shot.shake) { const a = shot.shake * Math.max(0, 1 - lt / 0.6); cam.rotateZ(Math.sin(t * 61) * 0.02 * a); cam.rotateX(Math.sin(t * 47) * 0.012 * a); }
   stars.rotation.y = t * 0.004;
   renderer.render(scene, cam);
   ctx.drawImage(gl, 0, 0);
   // cut flash
   const fl = clamp(1 - lt / 0.12) * (shot.cutFlash ? 0.5 : 0); if (fl) { ctx.fillStyle = `rgba(255,255,255,${fl})`; ctx.fillRect(0, 0, W, H); }
+  // hook title: big top text that pops in during the first seconds
+  if (S.hook && t < S.hook.t1) { const k = clamp(t / 0.25), out = clamp((S.hook.t1 - t) / 0.2); const sc = (0.6 + 0.4 * sm(k)) * (1 + 0.08 * Math.pow(1 - clamp(t / 0.5), 2)); ctx.save(); ctx.globalAlpha = out; ctx.translate(W / 2, H * 0.17); ctx.scale(sc, sc); ctx.font = '800 76px "DejaVu Sans", Verdana, Arial, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; ctx.lineWidth = 14; ctx.strokeStyle = 'rgba(0,0,0,0.9)';
+    const lines = S.hook.text.split('\n'); const fit = Math.min(1, (W * 0.88) / Math.max(...lines.map((l) => ctx.measureText(l).width))); ctx.scale(fit, fit); lines.forEach((ln, i) => { const y = (i - (lines.length - 1) / 2) * 84; ctx.strokeText(ln, 0, y); ctx.fillStyle = i === lines.length - 1 ? '#ffd23a' : '#ffffff'; ctx.fillText(ln, 0, y); }); ctx.restore(); }
   // captions: plain bold white, lower third, like the reference
-  for (const c of S.captions) { if (t < c.t0 || t > c.t1) continue; const size = 62; ctx.save(); ctx.font = `700 ${size}px "DejaVu Sans", Verdana, Arial, sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; ctx.shadowColor = 'rgba(0,0,0,0.9)'; ctx.shadowBlur = 8; ctx.shadowOffsetY = 3; ctx.lineWidth = 10; ctx.strokeStyle = 'rgba(0,0,0,0.85)'; ctx.fillStyle = c.color || '#fff'; const y = H * 0.76; ctx.strokeText(c.text, W / 2 - 30, y); ctx.fillText(c.text, W / 2 - 30, y); ctx.restore(); }
+  for (const c of S.captions) { if (t < c.t0 || t > c.t1) continue; const size = 62; ctx.save(); ctx.font = `700 ${size}px "DejaVu Sans", Verdana, Arial, sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; ctx.shadowColor = 'rgba(0,0,0,0.9)'; ctx.shadowBlur = 8; ctx.shadowOffsetY = 3; ctx.lineWidth = 10; ctx.strokeStyle = 'rgba(0,0,0,0.85)'; ctx.fillStyle = c.color || '#fff'; const y = H * 0.76; const pop = (1 + 0.12 * Math.pow(1 - clamp((t - c.t0) / 0.12), 2)) * Math.min(1, (W * 0.8) / ctx.measureText(c.text).width); ctx.translate(W / 2 - 30, y); ctx.scale(pop, pop); ctx.strokeText(c.text, 0, 0); ctx.fillText(c.text, 0, 0); ctx.restore(); }
 };
 window.loaded = true;
 </script></body></html>

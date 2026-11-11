@@ -1,7 +1,8 @@
 // usage: node render3d.mjs scene.json out_silent.mp4 [--frames t1,t2,...] [--dur seconds]
 import http from 'http'; import fs from 'fs'; import path from 'path'; import { spawn } from 'child_process';
 import { createRequire } from 'module';
-const { chromium } = createRequire('/opt/npm-tools/node_modules/')('playwright');
+const req = createRequire(import.meta.url);
+let chromium; try { ({ chromium } = req('playwright-core')); } catch { ({ chromium } = createRequire('/opt/npm-tools/node_modules/')('playwright')); }
 const root = path.dirname(new URL(import.meta.url).pathname);
 const [sceneFile, outFile, ...rest] = process.argv.slice(2);
 const opt = (k) => { const i = rest.indexOf(k); return i >= 0 ? rest[i + 1] : null; };
@@ -14,7 +15,7 @@ const server = http.createServer((q, r) => {
   r.writeHead(200, { 'content-type': mime[path.extname(p)] || 'application/octet-stream' }); fs.createReadStream(p).pipe(r);
 }).listen(0);
 const port = server.address().port;
-const browser = await chromium.launch({ executablePath: '/usr/bin/google-chrome', args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--no-sandbox'] });
+const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome', args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--no-sandbox'] });
 const page = await browser.newPage({ viewport: { width: 720, height: 1280 } });
 page.on('pageerror', (e) => console.error('PAGEERR', e.message));
 page.on('console', (m) => { if (m.type() === 'error') console.error('CONSOLE', m.text()); });
