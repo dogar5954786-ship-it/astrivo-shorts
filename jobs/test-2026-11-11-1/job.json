@@ -1,0 +1,467 @@
+{
+ "id": "test-2026-11-11-1",
+ "title": "What If Earth Stopped Spinning?",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20768/MPYnN-ocn892K_bxmbfx0NZM-dgXo_HesEGOE55U6AH7jmmgIkMWkc_ZsxYNbX2GL997pbbwdACJbFpnBloomJDRdmtphTNZ76lODJsk6KbApHPkZx1T51IxSLFIDj0xSLp_eJ5f0_fNmkDETVXbi7hyXG05CiVnBQYXHWQgCbs",
+ "hook": {
+  "text": "WHAT IF EARTH\nSTOPPED SPINNING?",
+  "seconds": 2.8
+ },
+ "segments": [
+  {
+   "text": "If Earth stopped spinning, you'd die in seconds.",
+   "page": "space",
+   "shot": {
+    "punch": true,
+    "shake": 1,
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.5
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       3.2
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40,
+      "roll": 0.1
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.9,
+       0.3,
+       2.9
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40,
+      "roll": -0.05
+     }
+    ]
+   }
+  },
+  {
+   "text": "Right now, at the equator, you're moving a thousand miles an hour.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.9,
+     "tilt": 0.1
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       -1.5,
+       0.4,
+       4.4
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       1.0,
+       0.1,
+       3.6
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "Stop the planet, and everything not tied down keeps going.",
+   "page": "street"
+  },
+  {
+   "text": "People, cars, even oceans... thrown east like rockets!",
+   "page": "street"
+  },
+  {
+   "text": "But that's not the worst part.",
+   "page": "space",
+   "shot": {
+    "shake": 1.5,
+    "punch": true,
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.02
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       3.0
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0,
+       0,
+       2.7
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "One day would last a whole year.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      1.4,
+      -1.6,
+      0
+     ],
+     "scale": 1.4,
+     "spin": 0.01
+    },
+    "sun": {
+     "pos": [
+      -4.2,
+      6.6,
+      -12
+     ],
+     "scale": 1.5
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       9
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 44
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.4,
+       0.3,
+       7.5
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 44
+     }
+    ]
+   }
+  },
+  {
+   "text": "One side would bake under the Sun for six months,",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      3.2,
+      -4.2,
+      0
+     ],
+     "scale": 3.6,
+     "spin": 0.01
+    },
+    "sun": {
+     "pos": [
+      -4.2,
+      6.6,
+      -12
+     ],
+     "scale": 1.5
+    },
+    "streaks": true,
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       10
+      ],
+      "look": [
+       0,
+       0.5,
+       0
+      ],
+      "fov": 46
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.5,
+       0.5,
+       7.5
+      ],
+      "look": [
+       -0.5,
+       0.5,
+       0
+      ],
+      "fov": 46
+     }
+    ]
+   }
+  },
+  {
+   "text": "while the other side freezes in total darkness.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.01
+    },
+    "sun": {
+     "pos": [
+      0,
+      0,
+      -40
+     ],
+     "scale": 2.5
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       3.6
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.3,
+       0.1,
+       3.2
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "Even Earth's magnetic shield could slowly fade,",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.05
+    },
+    "field": true,
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0.2,
+       13
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 42
+     },
+     {
+      "t": 1,
+      "pos": [
+       3,
+       2,
+       10
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 42
+     }
+    ]
+   }
+  },
+  {
+   "text": "letting the Sun's radiation pour straight in.",
+   "page": "space",
+   "shot": {
+    "shake": 0.6,
+    "earth": {
+     "pos": [
+      3.2,
+      -4.2,
+      0
+     ],
+     "scale": 3.6,
+     "spin": 0.01
+    },
+    "sun": {
+     "pos": [
+      -4.2,
+      6.6,
+      -12
+     ],
+     "scale": 1.8
+    },
+    "streaks": true,
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       8
+      ],
+      "look": [
+       -0.5,
+       0.5,
+       0
+      ],
+      "fov": 46
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.3,
+       0.3,
+       6.5
+      ],
+      "look": [
+       -0.5,
+       0.5,
+       0
+      ],
+      "fov": 46
+     }
+    ]
+   }
+  },
+  {
+   "text": "So the next time a day feels long... be glad Earth keeps spinning.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.5
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       5
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0,
+       0,
+       3.2
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  }
+ ]
+}
