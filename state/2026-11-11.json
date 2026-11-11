@@ -31,9 +31,11 @@
  "log": [
   "2026-11-11T22:03+05:00 test review email sent (link only, file was 28MB)",
   "2026-11-11T23:06+05:00 \"approve now\" from Abdullah (msg 1a1cb9c43d35914e) -> job 1 approved",
-  "2026-11-11T23:06+05:00 uploaded job 1 to YouTube: https://youtube.com/shorts/Rsd2UKgZKUQ"
+  "2026-11-11T23:06+05:00 uploaded job 1 to YouTube: https://youtube.com/shorts/Rsd2UKgZKUQ",
+  "2026-11-11T23:07+05:00 upload confirmation sent in review thread (msg 1a1cbca00ae9c6bb)"
  ],
  "seen_msgs": [
-  "1a1cb9c43d35914e"
+  "1a1cb9c43d35914e",
+  "1a1cbca00ae9c6bb"
  ]
 }
