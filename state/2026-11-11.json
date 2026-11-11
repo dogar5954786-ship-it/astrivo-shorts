@@ -1,14 +1,36 @@
 {
  "date": "2026-11-11",
  "topics_thread_id": null,
- "picks": [1],
+ "picks": [
+  1
+ ],
  "notes": "test run set up by hand",
  "jobs": [
-  {"id": "test-2026-11-11-1", "topic_no": 1, "title": "What If Earth Stopped Spinning?",
+  {
+   "id": "test-2026-11-11-1",
+   "topic_no": 1,
+   "title": "What If Earth Stopped Spinning?",
    "description": "If Earth suddenly stopped spinning, everything on it would keep moving at 1,000 miles an hour. Here is what would happen next.\n\n#space #earth #whatif #science #shorts",
-   "tags": ["what if earth stopped spinning", "earth", "space", "science", "what if", "shorts"],
-   "status": "review_sent"}
+   "tags": [
+    "what if earth stopped spinning",
+    "earth",
+    "space",
+    "science",
+    "what if",
+    "shorts"
+   ],
+   "status": "approved",
+   "publish_at": "2026-11-11T23:06:00+05:00",
+   "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/test-2026-11-11-1.mp4",
+   "seconds": 34.5
+  }
  ],
  "review_thread_id": "1a1cb8dd1486be2d",
- "log": ["2026-11-11T22:03+05:00 test review email sent (link only, file was 28MB)"]
+ "log": [
+  "2026-11-11T22:03+05:00 test review email sent (link only, file was 28MB)",
+  "2026-11-11T23:06+05:00 \"approve now\" from Abdullah (msg 1a1cb9c43d35914e) -> job 1 approved"
+ ],
+ "seen_msgs": [
+  "1a1cb9c43d35914e"
+ ]
 }
