@@ -22,7 +22,7 @@ jobs:
         with: { python-version: "3.11" }
       - name: Install Node packages
         timeout-minutes: 5
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
       - name: Install ffmpeg (static build, no apt)
         timeout-minutes: 5
         run: |
@@ -63,4 +63,5 @@ jobs:
           git add jobs/*/result.json
           git diff --cached --quiet && exit 0
           git commit -m "Render results"
-          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 5; done
+          echo "could not push results"; exit 1

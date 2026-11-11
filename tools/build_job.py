@@ -183,7 +183,7 @@ def main():
     final = os.path.join(ROOT, "out", f"{jid}.mp4")
     sh("ffmpeg", "-y", "-loglevel", "error", "-i", silent, "-i", audio,
        "-filter_complex", "[1:a]adelay=0|0,apad[a]", "-map", "0:v", "-map", "[a]",
-       "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p",
+       "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-maxrate", "5M", "-bufsize", "10M", "-pix_fmt", "yuv420p",
        "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", final)
     res = {"status": "rendered", "id": jid, "seconds": round(duration(final), 2), "file": f"{jid}.mp4",
            "captions": captions}
