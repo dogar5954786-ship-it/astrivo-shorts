@@ -64,10 +64,11 @@
    ],
    "id": "2026-11-12-1-v2",
    "topic_no": 1,
-   "status": "review_sent",
+   "status": "approved",
    "style": "flat",
    "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-12-1-v2.mp4",
-   "seconds": 37.2
+   "seconds": 37.2,
+   "publish_at": "2026-11-12T19:00:00+05:00"
   }
  ],
  "review_thread_id": "1a1cd5cbb502009c",
@@ -81,7 +82,8 @@
   "2026-11-12T08:15+05:00 engine can only show Earth/Sun/Moon/planets/black hole/street, so a redo would look the same; both jobs set to 'redo' (on hold). Asked him in review thread (msg 1a1cdbae43bf27cd) to reply 'upgrade first' or 'redo anyway'",
   "2026-11-12T17:51+05:00 Abdullah (in chat): new flat style, 1 Short per day. Redo job 1 in the new style as 2026-11-12-1-v2 (pushed for render); job 2 dropped. Send its review as a reply in the review thread.",
   "2026-11-12T18:10+05:00 2026-11-12-1-v2 rendered (run 43221821270, 37.2 s), real video frames checked - ok",
-  "2026-11-12T18:16+05:00 v2 review sent as reply in review thread (msg 1a1cfe26bb7c6d08, link only, 27MB too big); old redo_waiting question closed (answered in chat)"
+  "2026-11-12T18:16+05:00 v2 review sent as reply in review thread (msg 1a1cfe26bb7c6d08, link only, 27MB too big); old redo_waiting question closed (answered in chat)",
+  "2026-11-12T19:10+05:00 'approve 7 PM' from Abdullah (msg 1a1cff0b8461df53, sent 18:27) -> 2026-11-12-1-v2 approved, publish_at 19:00 PKT"
  ],
  "seen_msgs": [
   "1a1cd1b55e3d3eb3",
@@ -89,6 +91,7 @@
   "1a1cd5cbb502009c",
   "1a1cdb012251521a",
   "1a1cdbae43bf27cd",
-  "1a1cfe26bb7c6d08"
+  "1a1cfe26bb7c6d08",
+  "1a1cff0b8461df53"
  ]
 }
