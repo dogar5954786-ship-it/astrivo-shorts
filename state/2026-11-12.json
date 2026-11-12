@@ -86,7 +86,8 @@
   "2026-11-12T18:10+05:00 2026-11-12-1-v2 rendered (run 43221821270, 37.2 s), real video frames checked - ok",
   "2026-11-12T18:16+05:00 v2 review sent as reply in review thread (msg 1a1cfe26bb7c6d08, link only, 27MB too big); old redo_waiting question closed (answered in chat)",
   "2026-11-12T19:10+05:00 'approve 7 PM' from Abdullah (msg 1a1cff0b8461df53, sent 18:27) -> 2026-11-12-1-v2 approved, publish_at 19:00 PKT",
-  "2026-11-12T19:10+05:00 uploaded 2026-11-12-1-v2 to YouTube: https://youtube.com/shorts/O169SzCaUP4"
+  "2026-11-12T19:10+05:00 uploaded 2026-11-12-1-v2 to YouTube: https://youtube.com/shorts/O169SzCaUP4",
+  "2026-11-12T19:11+05:00 upload confirmation sent in review thread (msg 1a1d0187469539ff)"
  ],
  "seen_msgs": [
   "1a1cd1b55e3d3eb3",
@@ -95,6 +96,7 @@
   "1a1cdb012251521a",
   "1a1cdbae43bf27cd",
   "1a1cfe26bb7c6d08",
-  "1a1cff0b8461df53"
+  "1a1cff0b8461df53",
+  "1a1d0187469539ff"
  ]
 }
