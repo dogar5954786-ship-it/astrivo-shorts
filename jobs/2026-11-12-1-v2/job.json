@@ -1,10 +1,10 @@
 {
- "id": "flat-test-moon",
+ "id": "2026-11-12-1-v2",
  "style": "flat",
- "title": "What If the Moon Came 10x Closer?",
+ "title": "What If the Moon Got Too Close?",
  "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20769/fydgoizgqj0d9_XANsYsRwCuOf1a6DRwP1VOg7DmKDP4y-GZ7UnTIfMsc8sjm0AUzQbtTOoXCxQu3fo_dpNNvwiGENseg_cZ9xicrJCAn1PpcVGm5A957kuwTXXcuWgNSabUODWhlLyUiXqwsCSWfxEqMyTp7qIovtSGt5GtVN0",
  "hook": {
-  "text": "WHAT IF THE MOON\nCAME 10× CLOSER?",
+  "text": "WHAT IF THE MOON\nGOT TOO CLOSE?",
   "y": 820
  },
  "highlight": [
