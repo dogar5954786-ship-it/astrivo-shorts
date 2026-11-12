@@ -22,10 +22,11 @@
     "science",
     "shorts"
    ],
-   "status": "review_sent",
+   "status": "redo",
    "voice_at": "2026-11-12T06:15+05:00",
    "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-12-1.mp4",
-   "seconds": 40.6
+   "seconds": 40.6,
+   "redo_notes": "Abdullah: animation looks irrelevant, same visuals as first video; visuals must illustrate exactly what each line says. Learn from other creators' videos on the same topic."
   },
   {
    "id": "2026-11-12-2",
@@ -42,10 +43,11 @@
     "science",
     "shorts"
    ],
-   "status": "review_sent",
+   "status": "redo",
    "voice_at": "2026-11-12T06:16+05:00",
    "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-12-2.mp4",
-   "seconds": 41.0
+   "seconds": 41.0,
+   "redo_notes": "Abdullah: animation looks irrelevant, same visuals as first video; visuals must illustrate exactly what each line says. Learn from other creators' videos on the same topic."
   }
  ],
  "review_thread_id": "1a1cd5cbb502009c",
@@ -54,11 +56,22 @@
   "2026-11-12T06:17+05:00 jobs 2026-11-12-1, 2026-11-12-2 pushed for render",
   "2026-11-12T06:18+05:00 'Got it' reply sent in topics thread (msg 1a1cd53a8b66dde3)",
   "2026-11-12T06:25+05:00 both jobs rendered (run 43133328025), frames checked",
-  "2026-11-12T06:28+05:00 review email sent (links only, 2x14MB too big to attach) thread 1a1cd5cbb502009c"
+  "2026-11-12T06:28+05:00 review email sent (links only, 2x14MB too big to attach) thread 1a1cd5cbb502009c",
+  "2026-11-12T08:15+05:00 'redo 1' + 'redo 2' from Abdullah (msg 1a1cdb012251521a): visuals don't match the words, same as first video",
+  "2026-11-12T08:15+05:00 engine can only show Earth/Sun/Moon/planets/black hole/street, so a redo would look the same; both jobs set to 'redo' (on hold). Asked him in review thread (msg 1a1cdbae43bf27cd) to reply 'upgrade first' or 'redo anyway'"
  ],
  "seen_msgs": [
   "1a1cd1b55e3d3eb3",
   "1a1cd53a8b66dde3",
-  "1a1cd5cbb502009c"
- ]
+  "1a1cd5cbb502009c",
+  "1a1cdb012251521a",
+  "1a1cdbae43bf27cd"
+ ],
+ "redo_waiting": {
+  "asked_msg": "1a1cdbae43bf27cd",
+  "options": {
+   "upgrade first": "hold both jobs until new scenes are added to the engine (a human-started Claude session), then remake as -v2",
+   "redo anyway": "remake both as -v2 now with current engine, same numbers, status redo_rendering"
+  }
+ }
 }
