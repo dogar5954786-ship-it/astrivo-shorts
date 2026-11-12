@@ -64,11 +64,13 @@
    ],
    "id": "2026-11-12-1-v2",
    "topic_no": 1,
-   "status": "approved",
+   "status": "uploaded",
    "style": "flat",
    "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-12-1-v2.mp4",
    "seconds": 37.2,
-   "publish_at": "2026-11-12T19:00:00+05:00"
+   "publish_at": "2026-11-12T19:00:00+05:00",
+   "youtube_id": "O169SzCaUP4",
+   "youtube_url": "https://youtube.com/shorts/O169SzCaUP4"
   }
  ],
  "review_thread_id": "1a1cd5cbb502009c",
@@ -83,7 +85,8 @@
   "2026-11-12T17:51+05:00 Abdullah (in chat): new flat style, 1 Short per day. Redo job 1 in the new style as 2026-11-12-1-v2 (pushed for render); job 2 dropped. Send its review as a reply in the review thread.",
   "2026-11-12T18:10+05:00 2026-11-12-1-v2 rendered (run 43221821270, 37.2 s), real video frames checked - ok",
   "2026-11-12T18:16+05:00 v2 review sent as reply in review thread (msg 1a1cfe26bb7c6d08, link only, 27MB too big); old redo_waiting question closed (answered in chat)",
-  "2026-11-12T19:10+05:00 'approve 7 PM' from Abdullah (msg 1a1cff0b8461df53, sent 18:27) -> 2026-11-12-1-v2 approved, publish_at 19:00 PKT"
+  "2026-11-12T19:10+05:00 'approve 7 PM' from Abdullah (msg 1a1cff0b8461df53, sent 18:27) -> 2026-11-12-1-v2 approved, publish_at 19:00 PKT",
+  "2026-11-12T19:10+05:00 uploaded 2026-11-12-1-v2 to YouTube: https://youtube.com/shorts/O169SzCaUP4"
  ],
  "seen_msgs": [
   "1a1cd1b55e3d3eb3",
