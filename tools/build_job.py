@@ -3,6 +3,11 @@
 
 Usage: python3 tools/build_job.py jobs/<id>            (needs jobs/<id>/job.json)
        python3 tools/build_job.py jobs/<id> --audio x.mp3 --no-whisper   (local testing)
+       python3 tools/build_job.py jobs/<id> --preview [--audio x.mp3]   (flat style: contact sheet only,
+                                                 timings estimated from the text if there is no audio)
+
+Jobs with "style": "flat" use the Flat-Vector Science renderer (flat/, needs jobs/<id>/scene.js).
+Older jobs use the 3D renderer below.
 
 Steps:
  1. download the voiceover (voice_url)
@@ -103,7 +108,8 @@ def chunk_captions(words, max_words=3, max_chars=16):
     out = []
     for c in chunks:
         txt = " ".join(x[0] for x in c)
-        txt = re.sub(r"[,;:.\"“”]+", "", txt).replace("  ", " ").strip()
+        txt = re.sub(r"[;:.\"“”]+", "", txt)
+        txt = re.sub(r",(?!\d)", "", txt).replace("  ", " ").strip()   # keep commas inside numbers (384,400)
         out.append({"text": txt, "t0": c[0][1], "t1": c[-1][2]})
     for i in range(len(out) - 1):  # hold each caption until the next one starts (no flicker)
         if out[i + 1]["t0"] - out[i]["t1"] < 0.6:
@@ -111,8 +117,76 @@ def chunk_captions(words, max_words=3, max_chars=16):
     return out
 
 
+def estimate_words(tokens, wps=2.75):
+    """No audio yet: spread words at a natural speaking pace, with a pause after sentences."""
+    t, out = 0.1, []
+    for w in tokens:
+        d = (len(w) + 3) / (wps * 7.0)
+        out.append((t, t + d))
+        t += d + (0.18 if re.search(r"[.?!]$", w) else 0.06 if w.endswith(",") else 0)
+    return out, t + 0.2
+
+
+def build_flat(job, job_dir, args):
+    jid = job["id"]
+    work = os.path.join(ROOT, "build", jid)
+    os.makedirs(work, exist_ok=True)
+    use_whisper = "--no-whisper" not in args
+    preview = "--preview" in args
+    audio = None
+    if "--audio" in args:
+        audio = os.path.join(work, "voice.mp3")
+        shutil.copy(args[args.index("--audio") + 1], audio)
+    elif not preview:
+        audio = os.path.join(work, "voice.mp3")
+        req = urllib.request.Request(job["voice_url"], headers={"User-Agent": "astrivo-renderer"})
+        with urllib.request.urlopen(req, timeout=120) as r, open(audio, "wb") as f:
+            f.write(r.read())
+    tokens, owner = [], []
+    for si, seg in enumerate(job["segments"]):
+        for w in seg["text"].split():
+            tokens.append(w)
+            owner.append(si)
+    if audio:
+        times, total = align(tokens, audio, use_whisper)
+    else:
+        times, total = estimate_words(tokens)
+    words = [(tokens[i], times[i][0], times[i][1]) for i in range(len(tokens))]
+    nseg = len(job["segments"])
+    starts = [0.0 if si == 0 else max(0.0, words[owner.index(si)][1] - 0.04) for si in range(nseg)]
+    D = round(max(total, words[-1][2]) + float(job.get("tail", 1.2)), 3)
+    D = math.ceil(D * FPS) / FPS
+    segs = [{"i": si, "t0": round(starts[si], 3), "t1": round(starts[si + 1] if si + 1 < nseg else D, 3),
+             "text": job["segments"][si]["text"]} for si in range(nseg)]
+    timing = {"D": D, "segs": segs,
+              "words": [{"w": w, "t0": round(a, 3), "t1": round(b, 3), "s": owner[i]} for i, (w, a, b) in enumerate(words)],
+              "caps": chunk_captions(words)}
+    tpath = os.path.join(work, "timing.json")
+    json.dump(timing, open(tpath, "w"), indent=1)
+    rel = lambda p: os.path.relpath(p, ROOT)
+    renderer = os.path.join(ROOT, "flat", "render.mjs")
+    if preview:
+        sheet = os.path.join(work, "sheet.png")
+        cmd = ["node", renderer, "--job", rel(job_dir), "--timing", rel(tpath), "--sheet", sheet]
+        if "--frames" in args:
+            cmd += ["--frames", args[args.index("--frames") + 1]]
+        sh(*cmd)
+        print("PREVIEW", sheet, flush=True)
+        return
+    os.makedirs(os.path.join(ROOT, "out"), exist_ok=True)
+    final = os.path.join(ROOT, "out", f"{jid}.mp4")
+    sh("node", renderer, "--job", rel(job_dir), "--timing", rel(tpath), "--voice", audio, "--out", final)
+    res = {"status": "rendered", "id": jid, "style": "flat", "seconds": round(duration(final), 2), "file": f"{jid}.mp4",
+           "captions": timing["caps"]}
+    json.dump(res, open(os.path.join(job_dir, "result.json"), "w"), indent=1)
+    print("DONE", final, res["seconds"], "s", flush=True)
+
+
 def main():
     args = sys.argv[1:]
+    _job = json.load(open(os.path.join(os.path.abspath(args[0]), "job.json")))
+    if _job.get("style") == "flat":
+        return build_flat(_job, os.path.abspath(args[0]), args)
     job_dir = os.path.abspath(args[0])
     use_whisper = "--no-whisper" not in args
     job = json.load(open(os.path.join(job_dir, "job.json")))
