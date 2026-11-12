@@ -1,0 +1,50 @@
+{
+ "id": "flat-test-moon",
+ "style": "flat",
+ "title": "What If the Moon Came 10x Closer?",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20769/fydgoizgqj0d9_XANsYsRwCuOf1a6DRwP1VOg7DmKDP4y-GZ7UnTIfMsc8sjm0AUzQbtTOoXCxQu3fo_dpNNvwiGENseg_cZ9xicrJCAn1PpcVGm5A957kuwTXXcuWgNSabUODWhlLyUiXqwsCSWfxEqMyTp7qIovtSGt5GtVN0",
+ "hook": {
+  "text": "WHAT IF THE MOON\nCAME 10× CLOSER?",
+  "y": 820
+ },
+ "highlight": [
+  "Moon",
+  "rings",
+  "volcanoes",
+  "apart",
+  "away"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 100
+ },
+ "segments": [
+  {
+   "text": "What if the Moon came ten times closer?"
+  },
+  {
+   "text": "Right now, it's 384,400 kilometers away."
+  },
+  {
+   "text": "Cut that in half, and the tides get eight times stronger."
+  },
+  {
+   "text": "Now bring it ten times closer. It would fill your sky."
+  },
+  {
+   "text": "And its pull on the oceans? A thousand times stronger. Coastal cities would flood."
+  },
+  {
+   "text": "The squeezing would crack the ground and wake up volcanoes."
+  },
+  {
+   "text": "Closer than 18,000 kilometers, and Earth's gravity tears the Moon apart."
+  },
+  {
+   "text": "Its rubble would wrap our planet in rings."
+  },
+  {
+   "text": "Luckily, the Moon is drifting away, almost four centimeters every year."
+  }
+ ]
+}
