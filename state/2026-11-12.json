@@ -22,8 +22,10 @@
     "science",
     "shorts"
    ],
-   "status": "rendering",
-   "voice_at": "2026-11-12T06:15+05:00"
+   "status": "rendered",
+   "voice_at": "2026-11-12T06:15+05:00",
+   "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-12-1.mp4",
+   "seconds": 40.6
   },
   {
    "id": "2026-11-12-2",
@@ -40,15 +42,18 @@
     "science",
     "shorts"
    ],
-   "status": "rendering",
-   "voice_at": "2026-11-12T06:16+05:00"
+   "status": "rendered",
+   "voice_at": "2026-11-12T06:16+05:00",
+   "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-12-2.mp4",
+   "seconds": 41.0
   }
  ],
  "review_thread_id": null,
  "log": [
   "2026-11-12T06:14+05:00 picks 1, 2 from Abdullah (msg 1a1cd1b55e3d3eb3), no notes",
   "2026-11-12T06:17+05:00 jobs 2026-11-12-1, 2026-11-12-2 pushed for render",
-  "2026-11-12T06:18+05:00 'Got it' reply sent in topics thread (msg 1a1cd53a8b66dde3)"
+  "2026-11-12T06:18+05:00 'Got it' reply sent in topics thread (msg 1a1cd53a8b66dde3)",
+  "2026-11-12T06:25+05:00 both jobs rendered (run 43133328025), frames checked"
  ],
  "seen_msgs": [
   "1a1cd1b55e3d3eb3",
