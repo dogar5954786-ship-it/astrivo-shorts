@@ -1,0 +1,525 @@
+{
+ "id": "2026-11-12-1",
+ "title": "What If the Moon Got Too Close?",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20769/KhZAW1kpffgDQEvCthQFrbrFA_88isOlck66Wu0KtrZWovjl4Z0XPNS-iZN6xqw01_Sc8g90ck7ngwdJVC66ogHpQ-kgCMywcw9wzgeT_Kn0JAH4kk1EdmJzlpITilT7ELQPcUj4foJgsDux7U1v0i2YQOebT5VWe5UAUbgySh0",
+ "hook": {
+  "text": "WHAT IF THE MOON\nGOT TOO CLOSE?",
+  "seconds": 2.8
+ },
+ "segments": [
+  {
+   "text": "If the Moon came 10 times closer, we'd drown.",
+   "page": "space",
+   "shot": {
+    "punch": true,
+    "shake": 1,
+    "earth": {
+     "pos": [
+      -1.2,
+      -0.6,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.12
+    },
+    "moon": {
+     "pos": [
+      1.0,
+      0.9,
+      -0.6
+     ],
+     "scale": 0.45
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       4.6
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40,
+      "roll": 0.1
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.6,
+       0.2,
+       4.0
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40,
+      "roll": -0.05
+     }
+    ]
+   }
+  },
+  {
+   "text": "Because tides don't just get bigger... they explode.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.5
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       -1.4,
+       0.4,
+       4.2
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.9,
+       0.1,
+       3.4
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "Bring the Moon twice as close, and tides get eight times stronger.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      -1.2,
+      -0.6,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.12
+    },
+    "moon": {
+     "pos": [
+      1.6,
+      1.4,
+      -1
+     ],
+     "scale": 0.27
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       6
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.5,
+       0.2,
+       5.2
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "Ten times closer? A thousand times stronger!",
+   "page": "space",
+   "shot": {
+    "shake": 1,
+    "punch": true,
+    "earth": {
+     "pos": [
+      -0.9,
+      -0.9,
+      0
+     ],
+     "scale": 1.1,
+     "spin": 0.12
+    },
+    "moon": {
+     "pos": [
+      0.9,
+      0.9,
+      0.2
+     ],
+     "scale": 0.6
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       5.2
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.3,
+       0.1,
+       4.4
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "Walls of water hundreds of meters high would sweep over cities, twice a day.",
+   "page": "space",
+   "shot": {
+    "shake": 0.6,
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.9,
+     "tilt": 0.1
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       2.9
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.6,
+       0.2,
+       2.6
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "Even the solid ground would bulge, waking up volcanoes.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.3
+    },
+    "field": true,
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0.2,
+       13
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 42
+     },
+     {
+      "t": 1,
+      "pos": [
+       3,
+       2,
+       10
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 42
+     }
+    ]
+   }
+  },
+  {
+   "text": "But that's not the end.",
+   "page": "space",
+   "shot": {
+    "punch": true,
+    "shake": 1.2,
+    "moon": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.1
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       3.2
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0,
+       0,
+       2.8
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "Closer than about eighteen thousand kilometers, Earth's pull rips the Moon apart.",
+   "page": "space",
+   "shot": {
+    "shake": 0.8,
+    "earth": {
+     "pos": [
+      -1.6,
+      -0.8,
+      0
+     ],
+     "scale": 1.2,
+     "spin": 0.12
+    },
+    "moon": {
+     "pos": [
+      0.9,
+      0.7,
+      0.4
+     ],
+     "scale": 0.4
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       5.4
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.4,
+       0.2,
+       4.2
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "Its pieces would spread into a giant ring around our planet.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.2
+    },
+    "planet": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 0.95,
+     "color": "#9a9a9a",
+     "type": "rocky",
+     "rings": true,
+     "spin": 0.05
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       2.2,
+       9
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 42
+     },
+     {
+      "t": 1,
+      "pos": [
+       2.5,
+       1.4,
+       7
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 42
+     }
+    ]
+   }
+  },
+  {
+   "text": "The good news? The Moon is actually drifting away... about four centimeters every year.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      -1.2,
+      -0.6,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.12
+    },
+    "moon": {
+     "pos": [
+      1.6,
+      1.4,
+      -1
+     ],
+     "scale": 0.27
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0.5,
+       0.2,
+       5.0
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0,
+       0,
+       7.5
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  }
+ ]
+}

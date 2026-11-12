@@ -1,0 +1,541 @@
+{
+ "id": "2026-11-12-2",
+ "title": "What If the Sun Disappeared?",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20769/VUWEX3SflPQwMV4zsGZGejUM2uL7l5UjtUa_qJoPlzppzRlSdQ2xGJOlWLIJlr4mwjjcCHvxqsoJQQmcn-EedSbEXVk8Yp090vZ6g-9GZ9DHRYbdxAJsdtM2bCkXL_6dsGFSKJ1Pe2NRmRR1HYIWe346I8l9aLborGQO7ITTOuQ",
+ "hook": {
+  "text": "WHAT IF THE SUN\nDISAPPEARED?",
+  "seconds": 2.8
+ },
+ "segments": [
+  {
+   "text": "The Sun just vanished. Nobody on Earth knows.",
+   "page": "space",
+   "shot": {
+    "punch": true,
+    "shake": 1,
+    "sun": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1.2
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       4.5
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 42,
+      "roll": 0.1
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.6,
+       0.3,
+       3.8
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 42,
+      "roll": -0.05
+     }
+    ]
+   }
+  },
+  {
+   "text": "For eight minutes, the sky stays bright and warm.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      3.2,
+      -4.2,
+      0
+     ],
+     "scale": 3.6,
+     "spin": 0.05
+    },
+    "sun": {
+     "pos": [
+      -4.2,
+      6.6,
+      -12
+     ],
+     "scale": 1.5
+    },
+    "streaks": true,
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       10
+      ],
+      "look": [
+       -0.5,
+       0.5,
+       0
+      ],
+      "fov": 46
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.5,
+       0.5,
+       7.5
+      ],
+      "look": [
+       -0.5,
+       0.5,
+       0
+      ],
+      "fov": 46
+     }
+    ]
+   }
+  },
+  {
+   "text": "Because sunlight needs eight minutes to reach us.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      1.4,
+      -1.6,
+      0
+     ],
+     "scale": 1.4,
+     "spin": 0.12
+    },
+    "sun": {
+     "pos": [
+      -4.2,
+      6.6,
+      -12
+     ],
+     "scale": 1.5
+    },
+    "streaks": true,
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       9
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 44
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.4,
+       0.3,
+       7.5
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 44
+     }
+    ]
+   }
+  },
+  {
+   "text": "Then... darkness. Total darkness.",
+   "page": "space",
+   "shot": {
+    "punch": true,
+    "shake": 1.5,
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.05
+    },
+    "sun": {
+     "pos": [
+      0,
+      0,
+      60
+     ],
+     "scale": 0.1,
+     "light": "#141a2a"
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       3.0
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0,
+       0,
+       2.7
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "Even the Moon goes black, because it only reflects sunlight.",
+   "page": "space",
+   "shot": {
+    "moon": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.05
+    },
+    "sun": {
+     "pos": [
+      0,
+      0,
+      60
+     ],
+     "scale": 0.1,
+     "light": "#141a2a"
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       4.2
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.3,
+       0.1,
+       3.4
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "At that same moment, its gravity vanishes too, and Earth flies off in a straight line.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.2
+    },
+    "sun": {
+     "pos": [
+      0,
+      0,
+      60
+     ],
+     "scale": 0.1,
+     "light": "#141a2a"
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       5
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 42
+     },
+     {
+      "t": 1,
+      "pos": [
+       4,
+       1.5,
+       12
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 42
+     }
+    ]
+   }
+  },
+  {
+   "text": "Within a week, the whole surface drops below freezing.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.1,
+     "tilt": 0.3
+    },
+    "sun": {
+     "pos": [
+      0,
+      0,
+      60
+     ],
+     "scale": 0.1,
+     "light": "#3a4a6a"
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       -1.2,
+       0.6,
+       4.0
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.8,
+       0.2,
+       3.3
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "After a year? About minus one hundred degrees Fahrenheit.",
+   "page": "space",
+   "shot": {
+    "shake": 0.6,
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.05
+    },
+    "sun": {
+     "pos": [
+      0,
+      0,
+      60
+     ],
+     "scale": 0.1,
+     "light": "#141a2a"
+    },
+    "field": true,
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0.2,
+       13
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 42
+     },
+     {
+      "t": 1,
+      "pos": [
+       3,
+       2,
+       10
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 42
+     }
+    ]
+   }
+  },
+  {
+   "text": "But deep under the frozen oceans, life could survive near hot volcanic vents.",
+   "page": "space",
+   "shot": {
+    "earth": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1,
+     "spin": 0.1
+    },
+    "sun": {
+     "pos": [
+      0,
+      0,
+      60
+     ],
+     "scale": 0.1,
+     "light": "#2a3550"
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       3.4
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0.8,
+       0.3,
+       3.0
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  },
+  {
+   "text": "So right now... are you sure the Sun is still there?",
+   "page": "space",
+   "shot": {
+    "punch": true,
+    "sun": {
+     "pos": [
+      0,
+      0,
+      0
+     ],
+     "scale": 1.2
+    },
+    "camera": [
+     {
+      "t": 0,
+      "pos": [
+       0,
+       0,
+       6
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "t": 1,
+      "pos": [
+       0,
+       0,
+       4
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ]
+   }
+  }
+ ]
+}

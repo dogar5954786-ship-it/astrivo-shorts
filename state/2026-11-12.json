@@ -1,0 +1,55 @@
+{
+ "date": "2026-11-12",
+ "topics_thread_id": "1a1ccfa41dc6a0f8",
+ "picks": [
+  1,
+  2
+ ],
+ "notes": "",
+ "jobs": [
+  {
+   "id": "2026-11-12-1",
+   "topic_no": 1,
+   "title": "What If the Moon Got Too Close?",
+   "description": "If the Moon came 10 times closer, tides would turn into walls of water. Come even closer, and the Moon gets ripped into a ring.\n\n#moon #space #whatif #science #shorts",
+   "tags": [
+    "what if the moon got too close",
+    "moon",
+    "moon closer to earth",
+    "tides",
+    "space",
+    "what if",
+    "science",
+    "shorts"
+   ],
+   "status": "rendering",
+   "voice_at": "2026-11-12T06:15+05:00"
+  },
+  {
+   "id": "2026-11-12-2",
+   "topic_no": 2,
+   "title": "What If the Sun Disappeared?",
+   "description": "If the Sun vanished, we would not know for 8 minutes. Then comes the dark, the cold, and Earth flying off into space.\n\n#sun #space #whatif #science #shorts",
+   "tags": [
+    "what if the sun disappeared",
+    "sun",
+    "what if sun disappears",
+    "space",
+    "earth",
+    "what if",
+    "science",
+    "shorts"
+   ],
+   "status": "rendering",
+   "voice_at": "2026-11-12T06:16+05:00"
+  }
+ ],
+ "review_thread_id": null,
+ "log": [
+  "2026-11-12T06:14+05:00 picks 1, 2 from Abdullah (msg 1a1cd1b55e3d3eb3), no notes",
+  "2026-11-12T06:17+05:00 jobs 2026-11-12-1, 2026-11-12-2 pushed for render"
+ ],
+ "seen_msgs": [
+  "1a1cd1b55e3d3eb3"
+ ]
+}
