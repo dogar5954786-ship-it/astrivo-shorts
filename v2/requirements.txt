@@ -1,0 +1,7 @@
+pycairo
+numpy
+scipy
+soundfile
+pillow
+kokoro-onnx
+# faster-whisper  (only for aligning a real voiceover)
