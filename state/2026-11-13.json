@@ -1,0 +1,38 @@
+{
+ "date": "2026-11-13",
+ "topics_thread_id": "1a1d2211dbc9a8ff",
+ "picks": [
+  2
+ ],
+ "notes": "",
+ "jobs": [
+  {
+   "id": "2026-11-13-2",
+   "topic_no": 2,
+   "title": "What If Earth Lost Air for 5 Seconds?",
+   "description": "For just 5 seconds, all the air on Earth is gone. The sky turns black, planes drop, the oceans start to boil, and then the air comes crashing back.\n\n#whatif #earth #science #space #shorts",
+   "tags": [
+    "what if earth lost air for 5 seconds",
+    "what if earth had no atmosphere",
+    "earth without air",
+    "atmosphere",
+    "vacuum",
+    "what if",
+    "science",
+    "earth",
+    "shorts"
+   ],
+   "status": "rendering",
+   "style": "flat",
+   "voice_at": "2026-11-13T05:13+05:00"
+  }
+ ],
+ "review_thread_id": null,
+ "seen_msgs": [
+  "1a1d2379e7a6a0b6"
+ ],
+ "log": [
+  "2026-11-13T05:08+05:00 pick 2 from Abdullah (msg 1a1d2379e7a6a0b6), no notes",
+  "2026-11-13T05:14+05:00 job 2026-11-13-2 pushed for render"
+ ]
+}

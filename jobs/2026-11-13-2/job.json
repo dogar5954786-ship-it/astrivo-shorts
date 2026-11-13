@@ -1,0 +1,57 @@
+{
+ "id": "2026-11-13-2",
+ "style": "flat",
+ "title": "What If Earth Lost Air for 5 Seconds?",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20770/1H7sTmN5ggkRJYvh0YRC9Dhf_LZfbzxqzJGdjd2LdfYKM4cOXzPVdueQDWam_0P_rCa1XIHFzT5KjGqe8X_h2-023KyY4lW4t5au5n3jfpdFFJt-VE-ILhqtcocCZmbx96l0MPPahOudQ-0jhqYl0mXA0qgRQqERKwhZmsF01-4",
+ "hook": {
+  "text": "EARTH LOSES AIR\nFOR 5 SECONDS!",
+  "y": 820
+ },
+ "highlight": [
+  "air",
+  "black",
+  "silent",
+  "drop",
+  "pop",
+  "ozone",
+  "boil",
+  "thunderclap",
+  "seconds"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 104
+ },
+ "segments": [
+  {
+   "text": "For 5 seconds, all of Earth's air vanishes."
+  },
+  {
+   "text": "Instantly, the blue sky turns black, even at noon."
+  },
+  {
+   "text": "The world goes silent. No air means no sound."
+  },
+  {
+   "text": "Every plane in the sky loses lift and starts to drop."
+  },
+  {
+   "text": "The air in your lungs rushes out, and your ears pop hard."
+  },
+  {
+   "text": "Sunlight hits your skin raw, with no ozone to block it."
+  },
+  {
+   "text": "And the oceans? With no air pressing down, they start to boil!"
+  },
+  {
+   "text": "Then the air crashes back. 5,000 trillion tons, all at once."
+  },
+  {
+   "text": "One giant thunderclap, all around the planet."
+  },
+  {
+   "text": "All of that, in just 5 seconds."
+  }
+ ]
+}
