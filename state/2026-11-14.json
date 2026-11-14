@@ -23,12 +23,14 @@
         "earth",
         "shorts"
       ],
-      "status": "approved",
+      "status": "uploaded",
       "style": "flat",
       "voice_at": "2026-11-14T06:14+05:00",
       "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-14-3.mp4",
       "seconds": 42.37,
-      "publish_at": "2026-11-14T06:28:00+05:00"
+      "publish_at": "2026-11-14T06:28:00+05:00",
+      "youtube_id": "ZI43n2cECj4",
+      "youtube_url": "https://youtube.com/shorts/ZI43n2cECj4"
     }
   ],
   "review_thread_id": "1a1d7a24b728b6d2",
@@ -44,6 +46,7 @@
     "2026-11-14T06:16+05:00 'Got it' reply sent in topics thread (msg 1a1d79ed981ff962)",
     "2026-11-14T06:18+05:00 2026-11-14-3 rendered (42.4 s), real video hook frames checked - ok",
     "2026-11-14T06:19+05:00 review email sent (thread 1a1d7a24b728b6d2, link only: file 32 MB, over Gmail's 25 MB limit)",
-    "2026-11-14T07:08+05:00 Abdullah replied \"approve now\" (msg 1a1d7ab8df2bcd04, sent 06:28) -> approved, publish_at 06:28"
+    "2026-11-14T07:08+05:00 Abdullah replied \"approve now\" (msg 1a1d7ab8df2bcd04, sent 06:28) -> approved, publish_at 06:28",
+    "2026-11-14T07:09+05:00 uploaded 2026-11-14-3 to YouTube: https://youtube.com/shorts/ZI43n2cECj4"
   ]
 }
