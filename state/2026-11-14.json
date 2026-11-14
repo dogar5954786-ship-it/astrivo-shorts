@@ -38,7 +38,8 @@
     "1a1d78e1a9dbb77e",
     "1a1d79ed981ff962",
     "1a1d7a24b728b6d2",
-    "1a1d7ab8df2bcd04"
+    "1a1d7ab8df2bcd04",
+    "1a1d7d0460630571"
   ],
   "log": [
     "2026-11-14T06:09+05:00 pick 3 from Abdullah (msg 1a1d78e1a9dbb77e, sent 05:56), no notes",
@@ -47,6 +48,7 @@
     "2026-11-14T06:18+05:00 2026-11-14-3 rendered (42.4 s), real video hook frames checked - ok",
     "2026-11-14T06:19+05:00 review email sent (thread 1a1d7a24b728b6d2, link only: file 32 MB, over Gmail's 25 MB limit)",
     "2026-11-14T07:08+05:00 Abdullah replied \"approve now\" (msg 1a1d7ab8df2bcd04, sent 06:28) -> approved, publish_at 06:28",
-    "2026-11-14T07:09+05:00 uploaded 2026-11-14-3 to YouTube: https://youtube.com/shorts/ZI43n2cECj4"
+    "2026-11-14T07:09+05:00 uploaded 2026-11-14-3 to YouTube: https://youtube.com/shorts/ZI43n2cECj4",
+    "2026-11-14T07:10+05:00 upload confirmation sent in review thread (msg 1a1d7d0460630571)"
   ]
 }
