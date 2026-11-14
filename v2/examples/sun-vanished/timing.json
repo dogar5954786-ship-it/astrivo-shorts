@@ -1,0 +1,74 @@
+[
+ {
+  "id": "s01",
+  "text": "The Sun just vanished. But you won't know... for eight minutes.",
+  "start": 0.0,
+  "end": 3.128
+ },
+ {
+  "id": "s02",
+  "text": "Its last light is still racing toward us.",
+  "start": 3.228,
+  "end": 5.423
+ },
+ {
+  "id": "s03",
+  "text": "So the sky stays blue, and Earth keeps orbiting... nothing.",
+  "start": 5.523,
+  "end": 8.59
+ },
+ {
+  "id": "s04",
+  "text": "Then the timer hits zero. Lights out.",
+  "start": 8.69,
+  "end": 10.788
+ },
+ {
+  "id": "s05",
+  "text": "A second later, the Moon goes dark too.",
+  "start": 10.888,
+  "end": 12.85
+ },
+ {
+  "id": "s06",
+  "text": "Every plant stops growing. Only city lights still shine.",
+  "start": 12.95,
+  "end": 16.238
+ },
+ {
+  "id": "s07",
+  "text": "Earth drifts off into space, at thirty kilometers every second.",
+  "start": 16.338,
+  "end": 19.836
+ },
+ {
+  "id": "s08",
+  "text": "In one week, it's minus eighteen. Your breath turns to fog.",
+  "start": 19.936,
+  "end": 23.299
+ },
+ {
+  "id": "s09",
+  "text": "In one year, minus seventy three. The oceans freeze, and Earth turns white.",
+  "start": 23.399,
+  "end": 27.489
+ },
+ {
+  "id": "s10",
+  "text": "But deep under the ice, hot vents keep some life alive.",
+  "start": 27.589,
+  "end": 30.618
+ },
+ {
+  "id": "s11",
+  "text": "And the Sun you see right now? That light is already eight minutes old.",
+  "start": 30.718,
+  "end": 34.313
+ },
+ {
+  "id": "s12",
+  "text": "So how would you know... if it just vanished?",
+  "start": 34.413,
+  "end": 36.651
+ }
+]
