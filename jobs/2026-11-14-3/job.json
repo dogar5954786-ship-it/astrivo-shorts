@@ -1,0 +1,59 @@
+{
+ "id": "2026-11-14-3",
+ "style": "flat",
+ "title": "What If Earth Was a Cube?",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20771/hqZnhmRLv1I1j6lBFTN2Z28DpbZDWyRC0QV3z7CjITgEbdE9B8_oanY5vx54ivvtqV_FrbJzaqukWZHtxS0svjTCijulpc555TjR_sGeS3g9zQFm7iYylonfmZlfD7MpxTHMjEen0G7mvyCoPJO3QibDc93VMkobNl_I7jWDKbI",
+ "hook": {
+  "text": "WHAT IF EARTH\nWAS A CUBE?",
+  "y": 820
+ },
+ "highlight": [
+  "cube",
+  "bowl",
+  "oceans",
+  "seas",
+  "air",
+  "edge",
+  "slope",
+  "corners",
+  "space",
+  "ring",
+  "ball"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 102
+ },
+ "segments": [
+  {
+   "text": "What if Earth suddenly snapped into a cube?"
+  },
+  {
+   "text": "Gravity still pulls toward the center, so each flat side becomes a giant bowl."
+  },
+  {
+   "text": "All the oceans rush downhill, to the middle of each face."
+  },
+  {
+   "text": "6 round seas, one on every side."
+  },
+  {
+   "text": "The air slides into the middle too."
+  },
+  {
+   "text": "Walk toward an edge, and the ground tilts up, steeper and steeper."
+  },
+  {
+   "text": "At the edge, you're climbing a 45-degree slope."
+  },
+  {
+   "text": "And the corners? Thousands of kilometers high, poking out into space, with no air."
+  },
+  {
+   "text": "Life could only survive in a ring around each sea."
+  },
+  {
+   "text": "Luckily, gravity always squeezes big planets back into a ball."
+  }
+ ]
+}
