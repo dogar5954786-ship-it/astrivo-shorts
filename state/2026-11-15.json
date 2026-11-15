@@ -23,24 +23,27 @@
     "science",
     "shorts"
    ],
-   "status": "review_sent",
+   "status": "approved",
    "style": "flat",
    "voice_at": "2026-11-15T07:12+05:00",
    "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-15-1.mp4",
-   "seconds": 36.7
+   "seconds": 36.7,
+   "publish_at": "2026-11-15T17:00:00+05:00"
   }
  ],
  "review_thread_id": "1a1dcfdd32d6685c",
  "seen_msgs": [
   "1a1dccf3b975c799",
   "1a1dcfa723ce7e4d",
-  "1a1dcfdd32d6685c"
+  "1a1dcfdd32d6685c",
+  "1a1dd15c71369779"
  ],
  "log": [
   "2026-11-15T07:10+05:00 pick 1 from Abdullah (msg 1a1dccf3b975c799, sent 06:25), no notes",
   "2026-11-15T07:13+05:00 job 2026-11-15-1 pushed for render",
   "2026-11-15T07:14+05:00 'Got it' reply sent in topics thread (msg 1a1dcfa723ce7e4d)",
   "2026-11-15T07:18+05:00 2026-11-15-1 rendered (36.7 s), real video hook frames checked - ok",
-  "2026-11-15T07:19+05:00 review email sent with video attached (23 MB) (thread 1a1dcfdd32d6685c)"
+  "2026-11-15T07:19+05:00 review email sent with video attached (23 MB) (thread 1a1dcfdd32d6685c)",
+  "2026-11-15T08:09+05:00 \"approve 5 PM\" from Abdullah (msg 1a1dd15c71369779, sent 07:42) -> 2026-11-15-1 approved, publish_at 17:00 PKT"
  ]
 }
