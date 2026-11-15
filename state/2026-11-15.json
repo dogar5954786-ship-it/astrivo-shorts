@@ -1,0 +1,39 @@
+{
+ "date": "2026-11-15",
+ "topics_thread_id": "1a1dc6d681b52d31",
+ "picks": [
+  1
+ ],
+ "notes": "",
+ "jobs": [
+  {
+   "id": "2026-11-15-1",
+   "topic_no": 1,
+   "title": "What If You Fell Into a Black Hole?",
+   "description": "Fall into a black hole and gravity pulls your feet much harder than your head, stretching you like spaghetti. Your friend far away sees your clock slow down and you freeze at the edge. But a giant black hole has a twist.\n\n#blackhole #space #whatif #science #shorts",
+   "tags": [
+    "what if you fell into a black hole",
+    "black hole",
+    "spaghettification",
+    "falling into a black hole",
+    "event horizon",
+    "time dilation",
+    "what if",
+    "space",
+    "science",
+    "shorts"
+   ],
+   "status": "rendering",
+   "style": "flat",
+   "voice_at": "2026-11-15T07:12+05:00"
+  }
+ ],
+ "review_thread_id": null,
+ "seen_msgs": [
+  "1a1dccf3b975c799"
+ ],
+ "log": [
+  "2026-11-15T07:10+05:00 pick 1 from Abdullah (msg 1a1dccf3b975c799, sent 06:25), no notes",
+  "2026-11-15T07:13+05:00 job 2026-11-15-1 pushed for render"
+ ]
+}

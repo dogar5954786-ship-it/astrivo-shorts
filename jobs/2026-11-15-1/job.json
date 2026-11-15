@@ -1,0 +1,59 @@
+{
+ "id": "2026-11-15-1",
+ "style": "flat",
+ "title": "What If You Fell Into a Black Hole?",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20772/iEyGoOYyBaEDMqEp91FsG-Dwr14gjmyo2fAgg6OYiDg2qxCjXvIE4Co3ctB7n1roVXcSm0ZGUUQGGsjDEM01X8OCAsKvO8Mwk8nItbh2mk-lk8omWEs7CNuSbt6uAPV85O5otWnoBX9TWkfpG5FUjM_8JRvO9nwG5ZF4itrYxTc",
+ "hook": {
+  "text": "WHAT IF YOU FELL\nIN A BLACK HOLE?",
+  "y": 230
+ },
+ "highlight": [
+  "spaghetti",
+  "spaghettification",
+  "noodle",
+  "red",
+  "freeze",
+  "forever",
+  "feet",
+  "head",
+  "nothing",
+  "twist",
+  "giant"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 98
+ },
+ "segments": [
+  {
+   "text": "Fall into a black hole, and you become spaghetti."
+  },
+  {
+   "text": "Say it's 10 times heavier than our Sun."
+  },
+  {
+   "text": "As you fall, your friend sees your clock slow down."
+  },
+  {
+   "text": "You turn red, and seem to freeze at the edge, forever."
+  },
+  {
+   "text": "But you feel your feet pulled harder than your head."
+  },
+  {
+   "text": "Your body stretches long and thin, like a noodle."
+  },
+  {
+   "text": "Scientists really call this spaghettification!"
+  },
+  {
+   "text": "At the edge, that stretch hits 20,000,000 times Earth's gravity."
+  },
+  {
+   "text": "The twist? A giant black hole lets you fall in feeling nothing."
+  },
+  {
+   "text": "Until deep inside... you still become spaghetti."
+  }
+ ]
+}
