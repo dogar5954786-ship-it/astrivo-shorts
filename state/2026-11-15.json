@@ -39,7 +39,8 @@
   "1a1dcfa723ce7e4d",
   "1a1dcfdd32d6685c",
   "1a1dd15c71369779",
-  "1a1dd2d2beabda67"
+  "1a1dd2d2beabda67",
+  "1a1df1c4f4f8abb6"
  ],
  "log": [
   "2026-11-15T07:10+05:00 pick 1 from Abdullah (msg 1a1dccf3b975c799, sent 06:25), no notes",
@@ -49,6 +50,7 @@
   "2026-11-15T07:19+05:00 review email sent with video attached (23 MB) (thread 1a1dcfdd32d6685c)",
   "2026-11-15T08:09+05:00 \"approve 5 PM\" from Abdullah (msg 1a1dd15c71369779, sent 07:42) -> 2026-11-15-1 approved, publish_at 17:00 PKT",
   "2026-11-15T08:10+05:00 schedule confirmation sent in review thread (msg 1a1dd2d2beabda67)",
-  "2026-11-15T17:08+05:00 uploaded 2026-11-15-1 to YouTube: https://youtube.com/shorts/VUVUJulJbRI"
+  "2026-11-15T17:08+05:00 uploaded 2026-11-15-1 to YouTube: https://youtube.com/shorts/VUVUJulJbRI",
+  "2026-11-15T17:09+05:00 upload confirmation sent in review thread (msg 1a1df1c4f4f8abb6)"
  ]
 }
