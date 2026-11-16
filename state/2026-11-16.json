@@ -39,7 +39,8 @@
   "1a1e2206f7ebaffa",
   "1a1e223e0160b089",
   "1a1e3b52bc6ed3ec",
-  "1a1e3d4009500db3"
+  "1a1e3d4009500db3",
+  "1a1e4b387c8538ed"
  ],
  "log": [
   "2026-11-16T07:08+05:00 pick 1 from Abdullah (msg 1a1e1ebc241c78a3, sent 06:14), no notes",
@@ -49,6 +50,7 @@
   "2026-11-16T07:17+05:00 review email sent (thread 1a1e223e0160b089, link only: file 29 MB, over Gmail's 25 MB limit)",
   "2026-11-16T15:09+05:00 \"approve 7 PM\" from Abdullah (msg 1a1e3b52bc6ed3ec, sent 14:34) -> 2026-11-16-1 approved, publish_at 19:00 PKT",
   "2026-11-16T15:10+05:00 schedule confirmation sent in review thread (msg 1a1e3d4009500db3)",
-  "2026-11-16T19:12+05:00 uploaded 2026-11-16-1 to YouTube: https://youtube.com/shorts/iPqZ-hemW68"
+  "2026-11-16T19:12+05:00 uploaded 2026-11-16-1 to YouTube: https://youtube.com/shorts/iPqZ-hemW68",
+  "2026-11-16T19:13+05:00 upload confirmation sent in review thread (msg 1a1e4b387c8538ed)"
  ]
 }
