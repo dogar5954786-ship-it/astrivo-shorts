@@ -1,0 +1,39 @@
+{
+ "date": "2026-11-16",
+ "topics_thread_id": "1a1e19406ea0f7bc",
+ "picks": [
+  1
+ ],
+ "notes": "",
+ "jobs": [
+  {
+   "id": "2026-11-16-1",
+   "topic_no": 1,
+   "title": "How Long You'd Last on Each Planet",
+   "description": "How long could you survive on each planet without a spacesuit? On Mercury and Mars about 2 minutes, but on Venus you'd be crushed and cooked in less than a second. Only one planet lets you last a lifetime.\n\n#space #planets #whatif #science #shorts",
+   "tags": [
+    "how long you'd last on each planet",
+    "how long would you survive on every planet",
+    "survive on other planets",
+    "venus",
+    "mars",
+    "mercury",
+    "jupiter",
+    "planets",
+    "space",
+    "shorts"
+   ],
+   "status": "rendering",
+   "style": "flat",
+   "voice_at": "2026-11-16T07:12+05:00"
+  }
+ ],
+ "review_thread_id": null,
+ "seen_msgs": [
+  "1a1e1ebc241c78a3"
+ ],
+ "log": [
+  "2026-11-16T07:08+05:00 pick 1 from Abdullah (msg 1a1e1ebc241c78a3, sent 06:14), no notes",
+  "2026-11-16T07:13+05:00 job 2026-11-16-1 pushed for render"
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "id": "2026-11-16-1",
+ "style": "flat",
+ "title": "How Long You'd Last on Each Planet",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20773/3aHBtZyOT3Q1kzcFk3rvZDjepzvFRuH7RelnIBt17sJAltrod_q9FiROV32hImHKDTrQqo-zZryDjZjQo672axj7Ycw3KU1uU1Wf1zvJEyRZ4jWOIEgSZC62N5T6Kdz8MZ5joVN73IRHYbYU4qxghy3BJx6UXqAHiLXhSGkYvPQ",
+ "hook": {
+  "text": "HOW LONG YOU'D\nLAST ON PLANETS",
+  "y": 220
+ },
+ "highlight": [
+  "Mercury",
+  "Mars",
+  "Venus",
+  "Jupiter",
+  "Saturn",
+  "Uranus",
+  "Neptune",
+  "deadliest",
+  "crushed",
+  "cooked",
+  "lead",
+  "ground",
+  "lifetime",
+  "now"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 102
+ },
+ "segments": [
+  {
+   "text": "On one planet, you'd last less than a second."
+  },
+  {
+   "text": "Start on Mercury. With no air, you'd pass out in 15 seconds."
+  },
+  {
+   "text": "And you'd be gone in about 2 minutes."
+  },
+  {
+   "text": "Mars is no better. Its air is too thin, so about 2 minutes again."
+  },
+  {
+   "text": "But Venus is the deadliest. Its air presses 90 times harder than Earth's."
+  },
+  {
+   "text": "And it's 465 degrees Celsius, hot enough to melt lead."
+  },
+  {
+   "text": "You'd be crushed and cooked in less than a second!"
+  },
+  {
+   "text": "Jupiter, Saturn, Uranus and Neptune have no ground at all."
+  },
+  {
+   "text": "You'd sink through the clouds until the pressure crushes you too."
+  },
+  {
+   "text": "The only planet where you'd last a lifetime? The one you're on right now."
+  }
+ ]
+}
