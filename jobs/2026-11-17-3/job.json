@@ -1,0 +1,62 @@
+{
+ "id": "2026-11-17-3",
+ "style": "flat",
+ "title": "All Planets Fit Between Earth and Moon",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20774/k8c4OQFk7nNCDXR6UHYgvQo4bLn1ND4sL8gFSOjaLVvzJseWJ5uB_zYMSeOd3waD4aactd2mc4h6DqlCT96tpHwGnngY-NHU8R9bvzNzVwg9FVCzFlNu-inyczS-5LpcAgbf0G-QQWjpSX0z1ZRaXRWXs3qXhsmWSQ5UaNuvMUs",
+ "hook": {
+  "text": "ALL PLANETS FIT\nRIGHT HERE?!",
+  "y": 880
+ },
+ "highlight": [
+  "Earth",
+  "Moon",
+  "Jupiter",
+  "Saturn",
+  "Uranus",
+  "Neptune",
+  "Venus",
+  "Mars",
+  "Mercury",
+  "fit",
+  "fits",
+  "spare",
+  "big",
+  "here"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 104
+ },
+ "segments": [
+  {
+   "text": "Every other planet can fit… right here."
+  },
+  {
+   "text": "This is the empty gap between Earth and the Moon."
+  },
+  {
+   "text": "When the Moon is farthest away, the gap is almost 400,000 kilometers."
+  },
+  {
+   "text": "Let's fill it. Jupiter slams in first, 143,000 kilometers wide."
+  },
+  {
+   "text": "Then Saturn, 120,000. Uranus and Neptune, about 50,000 each."
+  },
+  {
+   "text": "Venus, Mars and tiny Mercury squeeze in last."
+  },
+  {
+   "text": "That's every planet, side by side… and they all fit!"
+  },
+  {
+   "text": "There's even over 9,000 kilometers to spare."
+  },
+  {
+   "text": "So the Moon isn't close at all. Space is just that big."
+  },
+  {
+   "text": "And every planet fits… right here."
+  }
+ ]
+}

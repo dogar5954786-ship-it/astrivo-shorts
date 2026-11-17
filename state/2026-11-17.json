@@ -1,0 +1,39 @@
+{
+ "date": "2026-11-17",
+ "topics_thread_id": "1a1e6ba853af61a4",
+ "picks": [
+  3
+ ],
+ "notes": "",
+ "jobs": [
+  {
+   "id": "2026-11-17-3",
+   "topic_no": 3,
+   "title": "All Planets Fit Between Earth and Moon",
+   "description": "Every other planet in our solar system - Jupiter, Saturn, Uranus, Neptune, Venus, Mars and Mercury - can fit in the gap between Earth and the Moon when the Moon is at its farthest. And there's still over 9,000 km to spare!\n\n#space #planets #solarsystem #science #shorts",
+   "tags": [
+    "all planets fit between earth and moon",
+    "planets between earth and moon",
+    "distance to the moon",
+    "solar system",
+    "planets size comparison",
+    "jupiter",
+    "saturn",
+    "space facts",
+    "space",
+    "shorts"
+   ],
+   "status": "rendering",
+   "style": "flat",
+   "voice_at": "2026-11-17T08:11+05:00"
+  }
+ ],
+ "review_thread_id": null,
+ "seen_msgs": [
+  "1a1e77793896e1a4"
+ ],
+ "log": [
+  "2026-11-17T08:08+05:00 pick 3 from Abdullah (msg 1a1e77793896e1a4, sent 08:05), no notes",
+  "2026-11-17T08:12+05:00 job 2026-11-17-3 pushed for render (apogee framing: gap ~397,400 km surface to surface, planets 387,941 km)"
+ ]
+}
