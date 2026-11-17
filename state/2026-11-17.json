@@ -23,24 +23,27 @@
     "space",
     "shorts"
    ],
-   "status": "review_sent",
+   "status": "approved",
    "style": "flat",
    "voice_at": "2026-11-17T08:11+05:00",
    "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-17-3.mp4",
-   "seconds": 40.4
+   "seconds": 40.4,
+   "publish_at": "2026-11-17T20:00:00+05:00"
   }
  ],
  "review_thread_id": "1a1e780383f1bd96",
  "seen_msgs": [
   "1a1e77793896e1a4",
   "1a1e77ce6fee8d7d",
-  "1a1e780383f1bd96"
+  "1a1e780383f1bd96",
+  "1a1e78a7c04c8344"
  ],
  "log": [
   "2026-11-17T08:08+05:00 pick 3 from Abdullah (msg 1a1e77793896e1a4, sent 08:05), no notes",
   "2026-11-17T08:12+05:00 job 2026-11-17-3 pushed for render (apogee framing: gap ~397,400 km surface to surface, planets 387,941 km)",
   "2026-11-17T08:13+05:00 'Got it' reply sent in topics thread (msg 1a1e77ce6fee8d7d)",
   "2026-11-17T08:23+05:00 2026-11-17-3 rendered (40.4 s), real video hook frames checked - ok",
-  "2026-11-17T08:24+05:00 review email sent (thread 1a1e780383f1bd96, link only: file 28 MB, over Gmail's 25 MB limit)"
+  "2026-11-17T08:24+05:00 review email sent (thread 1a1e780383f1bd96, link only: file 28 MB, over Gmail's 25 MB limit)",
+  "2026-11-17T09:08+05:00 'approve 8 PM' from Abdullah (msg 1a1e78a7c04c8344, sent 08:26) -> approved, publish_at 20:00 PKT today"
  ]
 }
