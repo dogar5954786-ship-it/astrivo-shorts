@@ -23,12 +23,14 @@
     "space",
     "shorts"
    ],
-   "status": "approved",
+   "status": "uploaded",
    "style": "flat",
    "voice_at": "2026-11-17T08:11+05:00",
    "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-17-3.mp4",
    "seconds": 40.4,
-   "publish_at": "2026-11-17T20:00:00+05:00"
+   "publish_at": "2026-11-17T20:00:00+05:00",
+   "youtube_id": "Jz8m5zYWaeU",
+   "youtube_url": "https://youtube.com/shorts/Jz8m5zYWaeU"
   }
  ],
  "review_thread_id": "1a1e780383f1bd96",
@@ -46,6 +48,7 @@
   "2026-11-17T08:23+05:00 2026-11-17-3 rendered (40.4 s), real video hook frames checked - ok",
   "2026-11-17T08:24+05:00 review email sent (thread 1a1e780383f1bd96, link only: file 28 MB, over Gmail's 25 MB limit)",
   "2026-11-17T09:08+05:00 'approve 8 PM' from Abdullah (msg 1a1e78a7c04c8344, sent 08:26) -> approved, publish_at 20:00 PKT today",
-  "2026-11-17T09:09+05:00 'Scheduled' confirmation sent in review thread (msg 1a1e7b07206b5198)"
+  "2026-11-17T09:09+05:00 'Scheduled' confirmation sent in review thread (msg 1a1e7b07206b5198)",
+  "2026-11-17T20:09+05:00 uploaded 2026-11-17-3 to YouTube: https://youtube.com/shorts/Jz8m5zYWaeU"
  ]
 }
