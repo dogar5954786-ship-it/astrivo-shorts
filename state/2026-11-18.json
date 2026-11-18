@@ -36,7 +36,8 @@
   "1a1ee5c64a0ea508",
   "1a1ee9430cbce4f2",
   "1a1ee988ca637bfb",
-  "1a1ef1543f707207"
+  "1a1ef1543f707207",
+  "1a1ef345e2dab6b8"
  ],
  "log": [
   "2026-11-18T17:10+05:00 pick 1 from Abdullah (msg 1a1ee5c64a0ea508, sent 16:13), no notes",
@@ -44,6 +45,7 @@
   "2026-11-18T17:16+05:00 'Got it' reply sent in topics thread (msg 1a1ee9430cbce4f2)",
   "2026-11-18T17:19+05:00 2026-11-18-1 rendered (42.4 s), real video hook frames checked - ok",
   "2026-11-18T17:21+05:00 review email sent (thread 1a1ee988ca637bfb, link only: file 32 MB, over Gmail's 25 MB limit)",
-  "2026-11-18T20:10+05:00 'approve 12 AM' from Abdullah (msg 1a1ef1543f707207, sent 19:35) -> 12 AM today already passed, so publish_at 2026-11-19 00:00 PKT (midnight tonight)"
+  "2026-11-18T20:10+05:00 'approve 12 AM' from Abdullah (msg 1a1ef1543f707207, sent 19:35) -> 12 AM today already passed, so publish_at 2026-11-19 00:00 PKT (midnight tonight)",
+  "2026-11-18T20:11+05:00 'Scheduled' confirmation sent in review thread (msg 1a1ef345e2dab6b8)"
  ]
 }
