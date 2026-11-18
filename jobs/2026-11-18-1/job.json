@@ -1,0 +1,59 @@
+{
+ "id": "2026-11-18-1",
+ "style": "flat",
+ "title": "What If Two Planets Collided?",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20775/WrLqOFKStdMmppSqB26JIM9cG4LWmiIQXbWOsfnvzRKwe1xLi2qRw0-oG9cccBat7amZT9MNT4zHsPVYRbsdcrERLkfQ7qqVEwst0w3FrhIG_tP71DJI1jE0u0GjoQmK9meCn8R4LcfzGoaiZYIxqsi3kfcpZLJzeyySaOEUnBY",
+ "hook": {
+  "text": "TWO PLANETS\nCOLLIDE!",
+  "y": 930
+ },
+ "highlight": [
+  "Theia",
+  "Mars",
+  "Earth",
+  "melted",
+  "debris",
+  "ring",
+  "Moon",
+  "hours",
+  "collide",
+  "buried",
+  "billion"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 104
+ },
+ "segments": [
+  {
+   "text": "This is what happens when two planets collide."
+  },
+  {
+   "text": "Four and a half billion years ago, a planet the size of Mars smashed into Earth."
+  },
+  {
+   "text": "Scientists call it Theia. The crash was so violent, Earth's whole surface melted."
+  },
+  {
+   "text": "Rock boiled into vapor, and a giant cloud of glowing debris blasted into space."
+  },
+  {
+   "text": "The debris swirled around our planet in a burning ring."
+  },
+  {
+   "text": "Then it clumped together… into our Moon!"
+  },
+  {
+   "text": "Some scientists think it took just a few hours."
+  },
+  {
+   "text": "Back then, the Moon was about 15 times closer than today."
+  },
+  {
+   "text": "And pieces of Theia may still be buried deep inside Earth."
+  },
+  {
+   "text": "So every time you see the Moon, you're seeing what happens when two planets collide."
+  }
+ ]
+}

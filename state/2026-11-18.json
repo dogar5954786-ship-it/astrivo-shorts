@@ -1,0 +1,39 @@
+{
+ "date": "2026-11-18",
+ "topics_thread_id": "1a1ebe1998efc86a",
+ "picks": [
+  1
+ ],
+ "notes": "",
+ "jobs": [
+  {
+   "id": "2026-11-18-1",
+   "topic_no": 1,
+   "title": "What If Two Planets Collided?",
+   "description": "4.5 billion years ago, a planet the size of Mars called Theia smashed into Earth. The crash melted Earth's surface and blasted out the rubble that became our Moon - and pieces of Theia may still be buried deep inside Earth.\n\n#space #whatif #moon #science #shorts",
+   "tags": [
+    "what if two planets collided",
+    "what if planets collide",
+    "planet theia",
+    "theia impact",
+    "how the moon formed",
+    "giant impact",
+    "earth and theia",
+    "space facts",
+    "space",
+    "shorts"
+   ],
+   "status": "rendering",
+   "style": "flat",
+   "voice_at": "2026-11-18T17:14+05:00"
+  }
+ ],
+ "review_thread_id": null,
+ "seen_msgs": [
+  "1a1ee5c64a0ea508"
+ ],
+ "log": [
+  "2026-11-18T17:10+05:00 pick 1 from Abdullah (msg 1a1ee5c64a0ea508, sent 16:13), no notes",
+  "2026-11-18T17:15+05:00 job 2026-11-18-1 pushed for render (caption note: wrote 'Four and a half billion' because captions drop the '.' in 4.5)"
+ ]
+}
