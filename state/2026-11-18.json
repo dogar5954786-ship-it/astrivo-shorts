@@ -23,24 +23,27 @@
     "space",
     "shorts"
    ],
-   "status": "review_sent",
+   "status": "approved",
    "style": "flat",
    "voice_at": "2026-11-18T17:14+05:00",
    "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-18-1.mp4",
-   "seconds": 42.4
+   "seconds": 42.4,
+   "publish_at": "2026-11-19T00:00:00+05:00"
   }
  ],
  "review_thread_id": "1a1ee988ca637bfb",
  "seen_msgs": [
   "1a1ee5c64a0ea508",
   "1a1ee9430cbce4f2",
-  "1a1ee988ca637bfb"
+  "1a1ee988ca637bfb",
+  "1a1ef1543f707207"
  ],
  "log": [
   "2026-11-18T17:10+05:00 pick 1 from Abdullah (msg 1a1ee5c64a0ea508, sent 16:13), no notes",
   "2026-11-18T17:15+05:00 job 2026-11-18-1 pushed for render (caption note: wrote 'Four and a half billion' because captions drop the '.' in 4.5)",
   "2026-11-18T17:16+05:00 'Got it' reply sent in topics thread (msg 1a1ee9430cbce4f2)",
   "2026-11-18T17:19+05:00 2026-11-18-1 rendered (42.4 s), real video hook frames checked - ok",
-  "2026-11-18T17:21+05:00 review email sent (thread 1a1ee988ca637bfb, link only: file 32 MB, over Gmail's 25 MB limit)"
+  "2026-11-18T17:21+05:00 review email sent (thread 1a1ee988ca637bfb, link only: file 32 MB, over Gmail's 25 MB limit)",
+  "2026-11-18T20:10+05:00 'approve 12 AM' from Abdullah (msg 1a1ef1543f707207, sent 19:35) -> 12 AM today already passed, so publish_at 2026-11-19 00:00 PKT (midnight tonight)"
  ]
 }
