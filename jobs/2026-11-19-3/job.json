@@ -1,0 +1,59 @@
+{
+ "id": "2026-11-19-3",
+ "style": "flat",
+ "title": "Why Is Earth Tilted?",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20776/cIIovpNpCBbf9fastId2rLXf2srQl2KuKZwwGHwWEzHEBLDJCKmGXedGNHRt8s7uP4t1h0rjOEypnFM7hwUyBps6EwmRr-H28Ax7yfwGIvMbPoPKubl8uUZBX71P7vVfZXBO-NuJW8ORelxrTGSEnE_uiCd4E-BlZ57OTW7EmJ4",
+ "hook": {
+  "text": "WHY IS EARTH\nTILTED?",
+  "y": 960
+ },
+ "highlight": [
+  "crooked",
+  "crash",
+  "tipped",
+  "sideways",
+  "seasons",
+  "Summer",
+  "Winter",
+  "January",
+  "July",
+  "tilt",
+  "north"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 102
+ },
+ "segments": [
+  {
+   "text": "Earth is crooked. And a crash did it."
+  },
+  {
+   "text": "Our planet spins tipped over, leaning 23.5 degrees."
+  },
+  {
+   "text": "Why? Long ago, baby Earth was hit by huge planet-sized rocks."
+  },
+  {
+   "text": "Scientists think one giant crash knocked it sideways… and it never stood back up."
+  },
+  {
+   "text": "That lean is why we have seasons."
+  },
+  {
+   "text": "When your half tips toward the Sun, sunlight hits straight on. Summer!"
+  },
+  {
+   "text": "When it tips away, the light spreads thin. Winter."
+  },
+  {
+   "text": "Now the crazy part: in January, Earth is 5,000,000 kilometers closer to the Sun than in July."
+  },
+  {
+   "text": "Yet it's winter up north. Distance doesn't make seasons. The tilt does."
+  },
+  {
+   "text": "One crash, billions of years ago… is why you get summer."
+  }
+ ]
+}

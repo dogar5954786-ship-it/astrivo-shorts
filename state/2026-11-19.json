@@ -1,0 +1,39 @@
+{
+ "date": "2026-11-19",
+ "topics_thread_id": "1a1f106e94572703",
+ "picks": [
+  3
+ ],
+ "notes": "",
+ "jobs": [
+  {
+   "id": "2026-11-19-3",
+   "topic_no": 3,
+   "title": "Why Is Earth Tilted?",
+   "description": "Earth leans 23.5 degrees - most likely because a giant crash knocked it over when it was young. That tilt, not our distance from the Sun, gives us seasons. In fact, Earth is closest to the Sun in January!\n\n#space #earth #seasons #science #shorts",
+   "tags": [
+    "why is earth tilted",
+    "earth tilt",
+    "earth axial tilt",
+    "23.5 degrees",
+    "why do we have seasons",
+    "seasons explained",
+    "earth closest to the sun",
+    "space facts",
+    "science",
+    "shorts"
+   ],
+   "status": "rendering",
+   "style": "flat",
+   "voice_at": "2026-11-19T08:13+05:00"
+  }
+ ],
+ "review_thread_id": null,
+ "seen_msgs": [
+  "1a1f1992cb225161"
+ ],
+ "log": [
+  "2026-11-19T08:10+05:00 Abdullah picked 3 (msg 1a1f1992cb225161, sent 07:18), no notes",
+  "2026-11-19T08:15+05:00 job 2026-11-19-3 written (109 words, 10 segments), preview checked, voice made, pushed for render"
+ ]
+}
