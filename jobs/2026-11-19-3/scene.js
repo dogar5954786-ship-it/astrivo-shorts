@@ -17,7 +17,7 @@
   function init(T) {
     const s = T.s, w = (q, i) => T.word(q, i);
     TL = {
-      intro: s(1), tipped: w('tipped', 1), num: w('23.5', 1),
+      intro: s(1), tipped: w('tipped', 1), num: w('half', 1),
       why: s(2), long: w('long', 2), baby: w('baby', 2), rocks: [w('hit', 2), w('huge', 2) + 0.1, w('rocks', 2)],
       giant: w('giant', 3), crash: w('crash', 3) + 0.05, side: w('sideways', 3), never: w('never', 3),
       sweep: [s(4) - 0.25, s(4) + 0.5], cutB: s(4) + 0.12, seasons: w('seasons', 4),
