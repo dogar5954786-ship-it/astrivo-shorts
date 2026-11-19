@@ -1,46 +1,49 @@
 {
- "date": "2026-11-19",
- "topics_thread_id": "1a1f106e94572703",
- "picks": [
-  3
- ],
- "notes": "",
- "jobs": [
-  {
-   "id": "2026-11-19-3",
-   "topic_no": 3,
-   "title": "Why Is Earth Tilted?",
-   "description": "Earth leans 23.5 degrees - most likely because a giant crash knocked it over when it was young. That tilt, not our distance from the Sun, gives us seasons. In fact, Earth is closest to the Sun in January!\n\n#space #earth #seasons #science #shorts",
-   "tags": [
-    "why is earth tilted",
-    "earth tilt",
-    "earth axial tilt",
-    "23.5 degrees",
-    "why do we have seasons",
-    "seasons explained",
-    "earth closest to the sun",
-    "space facts",
-    "science",
-    "shorts"
-   ],
-   "status": "review_sent",
-   "style": "flat",
-   "voice_at": "2026-11-19T08:19+05:00",
-   "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-19-3.mp4",
-   "seconds": 50.3
-  }
- ],
- "review_thread_id": "1a1f1d4401bd4ba5",
- "seen_msgs": [
-  "1a1f1992cb225161",
-  "1a1f1cc4db7c756f",
-  "1a1f1d4401bd4ba5"
- ],
- "log": [
-  "2026-11-19T08:10+05:00 Abdullah picked 3 (msg 1a1f1992cb225161, sent 07:18), no notes",
-  "2026-11-19T08:15+05:00 job 2026-11-19-3 written (109 words, 10 segments), preview checked, voice made, pushed for render",
-  "2026-11-19T08:16+05:00 'Got it' reply sent in topics thread (msg 1a1f1cc4db7c756f)",
-  "2026-11-19T08:19+05:00 first render OK (46.8 s) but caption showed '23.5' as '235' (caption code drops decimal points). Changed line to '23 and a half degrees', new voice, re-render (deleted result.json)",
-  "2026-11-19T08:27+05:00 re-render OK (50.3 s), checked frames of real video (hook, key hit, end); review email sent without attachment (file >25MB), thread 1a1f1d4401bd4ba5"
- ]
+  "date": "2026-11-19",
+  "topics_thread_id": "1a1f106e94572703",
+  "picks": [
+    3
+  ],
+  "notes": "",
+  "jobs": [
+    {
+      "id": "2026-11-19-3",
+      "topic_no": 3,
+      "title": "Why Is Earth Tilted?",
+      "description": "Earth leans 23.5 degrees - most likely because a giant crash knocked it over when it was young. That tilt, not our distance from the Sun, gives us seasons. In fact, Earth is closest to the Sun in January!\n\n#space #earth #seasons #science #shorts",
+      "tags": [
+        "why is earth tilted",
+        "earth tilt",
+        "earth axial tilt",
+        "23.5 degrees",
+        "why do we have seasons",
+        "seasons explained",
+        "earth closest to the sun",
+        "space facts",
+        "science",
+        "shorts"
+      ],
+      "status": "approved",
+      "style": "flat",
+      "voice_at": "2026-11-19T08:19+05:00",
+      "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-19-3.mp4",
+      "seconds": 50.3,
+      "publish_at": "2026-11-19T23:00:00+05:00"
+    }
+  ],
+  "review_thread_id": "1a1f1d4401bd4ba5",
+  "seen_msgs": [
+    "1a1f1992cb225161",
+    "1a1f1cc4db7c756f",
+    "1a1f1d4401bd4ba5",
+    "1a1f463a1b4344ff"
+  ],
+  "log": [
+    "2026-11-19T08:10+05:00 Abdullah picked 3 (msg 1a1f1992cb225161, sent 07:18), no notes",
+    "2026-11-19T08:15+05:00 job 2026-11-19-3 written (109 words, 10 segments), preview checked, voice made, pushed for render",
+    "2026-11-19T08:16+05:00 'Got it' reply sent in topics thread (msg 1a1f1cc4db7c756f)",
+    "2026-11-19T08:19+05:00 first render OK (46.8 s) but caption showed '23.5' as '235' (caption code drops decimal points). Changed line to '23 and a half degrees', new voice, re-render (deleted result.json)",
+    "2026-11-19T08:27+05:00 re-render OK (50.3 s), checked frames of real video (hook, key hit, end); review email sent without attachment (file >25MB), thread 1a1f1d4401bd4ba5",
+    "2026-11-19 21:09 PKT: Abdullah replied \"approve 11 PM\" -> approved, publish_at 23:00 PKT"
+  ]
 }
