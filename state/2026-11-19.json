@@ -23,20 +23,24 @@
     "science",
     "shorts"
    ],
-   "status": "rendering",
+   "status": "review_sent",
    "style": "flat",
-   "voice_at": "2026-11-19T08:19+05:00"
+   "voice_at": "2026-11-19T08:19+05:00",
+   "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-19-3.mp4",
+   "seconds": 50.3
   }
  ],
- "review_thread_id": null,
+ "review_thread_id": "1a1f1d4401bd4ba5",
  "seen_msgs": [
   "1a1f1992cb225161",
-  "1a1f1cc4db7c756f"
+  "1a1f1cc4db7c756f",
+  "1a1f1d4401bd4ba5"
  ],
  "log": [
   "2026-11-19T08:10+05:00 Abdullah picked 3 (msg 1a1f1992cb225161, sent 07:18), no notes",
   "2026-11-19T08:15+05:00 job 2026-11-19-3 written (109 words, 10 segments), preview checked, voice made, pushed for render",
   "2026-11-19T08:16+05:00 'Got it' reply sent in topics thread (msg 1a1f1cc4db7c756f)",
-  "2026-11-19T08:19+05:00 first render OK (46.8 s) but caption showed '23.5' as '235' (caption code drops decimal points). Changed line to '23 and a half degrees', new voice, re-render (deleted result.json)"
+  "2026-11-19T08:19+05:00 first render OK (46.8 s) but caption showed '23.5' as '235' (caption code drops decimal points). Changed line to '23 and a half degrees', new voice, re-render (deleted result.json)",
+  "2026-11-19T08:27+05:00 re-render OK (50.3 s), checked frames of real video (hook, key hit, end); review email sent without attachment (file >25MB), thread 1a1f1d4401bd4ba5"
  ]
 }
