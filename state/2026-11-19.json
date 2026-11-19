@@ -23,12 +23,14 @@
         "science",
         "shorts"
       ],
-      "status": "approved",
+      "status": "uploaded",
       "style": "flat",
       "voice_at": "2026-11-19T08:19+05:00",
       "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-19-3.mp4",
       "seconds": 50.3,
-      "publish_at": "2026-11-19T23:00:00+05:00"
+      "publish_at": "2026-11-19T23:00:00+05:00",
+      "youtube_id": "XEb4HkT5O_k",
+      "youtube_url": "https://youtube.com/shorts/XEb4HkT5O_k"
     }
   ],
   "review_thread_id": "1a1f1d4401bd4ba5",
@@ -46,6 +48,7 @@
     "2026-11-19T08:19+05:00 first render OK (46.8 s) but caption showed '23.5' as '235' (caption code drops decimal points). Changed line to '23 and a half degrees', new voice, re-render (deleted result.json)",
     "2026-11-19T08:27+05:00 re-render OK (50.3 s), checked frames of real video (hook, key hit, end); review email sent without attachment (file >25MB), thread 1a1f1d4401bd4ba5",
     "2026-11-19 21:09 PKT: Abdullah replied \"approve 11 PM\" -> approved, publish_at 23:00 PKT",
-    "2026-11-19 21:10 PKT: sent \"Scheduled\" confirmation in review thread"
+    "2026-11-19 21:10 PKT: sent \"Scheduled\" confirmation in review thread",
+    "2026-11-19T23:08+05:00 uploaded 2026-11-19-3 to YouTube: https://youtube.com/shorts/XEb4HkT5O_k"
   ]
 }
