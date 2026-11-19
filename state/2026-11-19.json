@@ -36,7 +36,8 @@
     "1a1f1992cb225161",
     "1a1f1cc4db7c756f",
     "1a1f1d4401bd4ba5",
-    "1a1f463a1b4344ff"
+    "1a1f463a1b4344ff",
+    "1a1f491a3d1726e7"
   ],
   "log": [
     "2026-11-19T08:10+05:00 Abdullah picked 3 (msg 1a1f1992cb225161, sent 07:18), no notes",
@@ -44,6 +45,7 @@
     "2026-11-19T08:16+05:00 'Got it' reply sent in topics thread (msg 1a1f1cc4db7c756f)",
     "2026-11-19T08:19+05:00 first render OK (46.8 s) but caption showed '23.5' as '235' (caption code drops decimal points). Changed line to '23 and a half degrees', new voice, re-render (deleted result.json)",
     "2026-11-19T08:27+05:00 re-render OK (50.3 s), checked frames of real video (hook, key hit, end); review email sent without attachment (file >25MB), thread 1a1f1d4401bd4ba5",
-    "2026-11-19 21:09 PKT: Abdullah replied \"approve 11 PM\" -> approved, publish_at 23:00 PKT"
+    "2026-11-19 21:09 PKT: Abdullah replied \"approve 11 PM\" -> approved, publish_at 23:00 PKT",
+    "2026-11-19 21:10 PKT: sent \"Scheduled\" confirmation in review thread"
   ]
 }
