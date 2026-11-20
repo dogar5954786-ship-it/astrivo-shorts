@@ -1,0 +1,62 @@
+{
+ "id": "2026-11-20-3",
+ "style": "flat",
+ "title": "Earth Without Humans",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20777/0lQtoHe-WF3E76YdZYRtiGjvtn7Kd_mXo877GcH_nizsAeQ5v1yF3QXyXtwODy4_VlhDAlviWSRZ9aVvuHBxDeKokBCvcB2cX0ajA214CgB5vSxjlLFnFXHxgI_gjeacnNCXsyiymskTk9RGBjusVnxjhxY2VRaTBlECXBhRMy0",
+ "hook": {
+  "text": "WHAT IF HUMANS\nVANISHED?",
+  "y": 330
+ },
+ "highlight": [
+  "disappeared",
+  "lights",
+  "water",
+  "animals",
+  "Chernobyl",
+  "wolves",
+  "horses",
+  "trees",
+  "crash",
+  "gone",
+  "forest",
+  "millions",
+  "footprints",
+  "Moon"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 100
+ },
+ "segments": [
+  {
+   "text": "What if every human disappeared… right now?"
+  },
+  {
+   "text": "Within hours, power plants shut down, and the lights go out."
+  },
+  {
+   "text": "In just 2 days, subway tunnels fill up with water."
+  },
+  {
+   "text": "Wild animals move into the empty streets."
+  },
+  {
+   "text": "We've seen it happen: around Chernobyl, wolves and wild horses moved in."
+  },
+  {
+   "text": "After 20 years, trees break through roads and rooftops."
+  },
+  {
+   "text": "After 300 years, rusty towers and bridges crash down."
+  },
+  {
+   "text": "And after 10,000 years? Almost every city is gone, buried under forest."
+  },
+  {
+   "text": "But one thing would last for millions of years…"
+  },
+  {
+   "text": "our footprints on the Moon. The last sign we were ever here."
+  }
+ ]
+}
