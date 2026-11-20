@@ -23,12 +23,14 @@
     "science",
     "shorts"
    ],
-   "status": "approved",
+   "status": "uploaded",
    "style": "flat",
    "voice_at": "2026-11-20T20:14+05:00",
    "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-20-3.mp4",
    "seconds": 41.8,
-   "publish_at": "2026-11-20T21:22:00+05:00"
+   "publish_at": "2026-11-20T21:22:00+05:00",
+   "youtube_id": "yIO4_IqFygE",
+   "youtube_url": "https://youtube.com/shorts/yIO4_IqFygE"
   }
  ],
  "review_thread_id": "1a1f9898d6c96476",
@@ -38,7 +40,8 @@
   "1a1f9898d6c96476",
   "1a1f9a1a471fb3a2",
   "1a1f9b8133531e25",
-  "1a1f9c428a84c8fb"
+  "1a1f9c428a84c8fb",
+  "1a1f9eeab94093f1"
  ],
  "log": [
   "2026-11-20T20:09+05:00 Abdullah picked 3 (msg 1a1f980cd16dc56a, sent 20:08), no notes",
@@ -47,6 +50,8 @@
   "2026-11-20T20:18+05:00 2026-11-20-3 rendered (41.8 s), real video frames checked (hook, key hit, end) - ok",
   "2026-11-20T20:20+05:00 review email sent with video attached (24 MB), thread 1a1f9898d6c96476",
   "2026-11-20T21:12+05:00 Abdullah replied just 'approve' with no time (msg 1a1f9a1a471fb3a2, sent 20:44) -> not scheduled; asked him in review thread to reply 'approve now' or 'approve <time>' (msg 1a1f9b8133531e25). Job stays review_sent.",
-  "2026-11-20T22:10+05:00 'approve now' from Abdullah (msg 1a1f9c428a84c8fb, sent 21:22) -> approved, publish_at 21:22 PKT"
+  "2026-11-20T22:10+05:00 'approve now' from Abdullah (msg 1a1f9c428a84c8fb, sent 21:22) -> approved, publish_at 21:22 PKT",
+  "2026-11-20T22:08+05:00 uploaded 2026-11-20-3 to YouTube: https://youtube.com/shorts/yIO4_IqFygE",
+  "2026-11-20T22:09+05:00 upload confirmation sent in review thread (msg 1a1f9eeab94093f1)"
  ]
 }
