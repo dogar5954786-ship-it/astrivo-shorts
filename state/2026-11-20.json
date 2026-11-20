@@ -34,13 +34,16 @@
  "seen_msgs": [
   "1a1f980cd16dc56a",
   "1a1f985f1fff6369",
-  "1a1f9898d6c96476"
+  "1a1f9898d6c96476",
+  "1a1f9a1a471fb3a2",
+  "1a1f9b8133531e25"
  ],
  "log": [
   "2026-11-20T20:09+05:00 Abdullah picked 3 (msg 1a1f980cd16dc56a, sent 20:08), no notes",
   "2026-11-20T20:15+05:00 job 2026-11-20-3 written (98 words, 10 segments), preview checked (fixed one negative-radius bug), voice made, pushed for render",
   "2026-11-20T20:16+05:00 'Got it' reply sent in topics thread (msg 1a1f985f1fff6369)",
   "2026-11-20T20:18+05:00 2026-11-20-3 rendered (41.8 s), real video frames checked (hook, key hit, end) - ok",
-  "2026-11-20T20:20+05:00 review email sent with video attached (24 MB), thread 1a1f9898d6c96476"
+  "2026-11-20T20:20+05:00 review email sent with video attached (24 MB), thread 1a1f9898d6c96476",
+  "2026-11-20T21:12+05:00 Abdullah replied just 'approve' with no time (msg 1a1f9a1a471fb3a2, sent 20:44) -> not scheduled; asked him in review thread to reply 'approve now' or 'approve <time>' (msg 1a1f9b8133531e25). Job stays review_sent."
  ]
 }
