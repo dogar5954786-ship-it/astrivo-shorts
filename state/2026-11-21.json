@@ -38,7 +38,8 @@
   "1a1fef5bbb838901",
   "1a1ff185813fac7d",
   "1a1ff1cb9ac5e445",
-  "1a1ff261c59b3ba8"
+  "1a1ff261c59b3ba8",
+  "1a1ff4bba5f4d686"
  ],
  "log": [
   "2026-11-21T22:08+05:00 Abdullah picked 1 (msg 1a1fef5bbb838901, sent 21:34), no notes",
@@ -47,6 +48,7 @@
   "2026-11-21T22:17+05:00 2026-11-21-1 rendered (42.5 s), real video frames checked (hook, key hit, end) - ok",
   "2026-11-21T22:18+05:00 review email sent without attachment (file 28 MB > 25 MB), thread 1a1ff1cb9ac5e445",
   "2026-11-21T23:09+05:00 'approve now' from Abdullah (msg 1a1ff261c59b3ba8, sent 22:27) -> approved, publish_at 22:27 PKT",
-  "2026-11-21T23:10+05:00 uploaded 2026-11-21-1 to YouTube: https://youtube.com/shorts/y1gZvLzLZy8"
+  "2026-11-21T23:10+05:00 uploaded 2026-11-21-1 to YouTube: https://youtube.com/shorts/y1gZvLzLZy8",
+  "2026-11-21T23:11+05:00 upload confirmation sent in review thread (msg 1a1ff4bba5f4d686)"
  ]
 }
