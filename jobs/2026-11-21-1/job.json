@@ -1,0 +1,57 @@
+{
+ "id": "2026-11-21-1",
+ "style": "flat",
+ "title": "Sand Grain Hits Earth at Light Speed",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20778/s2skx_tpDwRr2GacaXRA9Lsl3fmwTVwmH3LkeuxWiYTejRuQcdntY1QRUNcNuGUTIj5sYQAnLAbUG-5mO4oS5P6C6RmGJ9bMFqozZw4G2nnWaOSlctr3unVZk8IacAqIPUpaBGQsPFh7LrBFslC8MhX03JkFodItoZnLthY9h9k",
+ "hook": {
+  "text": "SAND AT\nLIGHT SPEED?",
+  "y": 400
+ },
+ "highlight": [
+  "nuke",
+  "sand",
+  "milligram",
+  "nothing",
+  "kilogram",
+  "TNT",
+  "light",
+  "Boom",
+  "atomic",
+  "flash",
+  "infinite",
+  "mass"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 104
+ },
+ "segments": [
+  {
+   "text": "This grain of sand could hit like a nuke."
+  },
+  {
+   "text": "It weighs about 1 milligram. Toss it at a window, and nothing happens."
+  },
+  {
+   "text": "But fire it at 1% of light speed, and it blasts like a kilogram of TNT."
+  },
+  {
+   "text": "At 99% of light speed? About 130 tons of TNT."
+  },
+  {
+   "text": "Now get it just 300 meters per second slower than light itself."
+  },
+  {
+   "text": "Boom. 15,000 tons of TNT, as strong as an atomic bomb."
+  },
+  {
+   "text": "It would explode high in the sky, in a blinding flash."
+  },
+  {
+   "text": "And at exactly light speed? The energy becomes infinite."
+  },
+  {
+   "text": "That's why nothing with mass can reach it… not even sand."
+  }
+ ]
+}

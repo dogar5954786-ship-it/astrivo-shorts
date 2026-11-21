@@ -1,0 +1,39 @@
+{
+ "date": "2026-11-21",
+ "topics_thread_id": "1a1fb5480739235f",
+ "picks": [
+  1
+ ],
+ "notes": "",
+ "jobs": [
+  {
+   "id": "2026-11-21-1",
+   "topic_no": 1,
+   "title": "Sand Grain Hits Earth at Light Speed",
+   "description": "What if one tiny grain of sand hit Earth close to the speed of light? At 99% of light speed it hits like 130 tons of TNT - and just 300 m/s slower than light, like an atomic bomb. At exactly light speed, the energy would be infinite!\n\n#space #physics #whatif #science #shorts",
+   "tags": [
+    "sand grain at light speed",
+    "speed of light",
+    "what if",
+    "light speed",
+    "grain of sand hits earth",
+    "relativity",
+    "physics",
+    "space facts",
+    "science",
+    "shorts"
+   ],
+   "status": "rendering",
+   "style": "flat",
+   "voice_at": "2026-11-21T22:12+05:00"
+  }
+ ],
+ "review_thread_id": null,
+ "seen_msgs": [
+  "1a1fef5bbb838901"
+ ],
+ "log": [
+  "2026-11-21T22:08+05:00 Abdullah picked 1 (msg 1a1fef5bbb838901, sent 21:34), no notes",
+  "2026-11-21T22:13+05:00 job 2026-11-21-1 written (102 words, 9 segments; energy math checked for a 1 mg grain), preview checked (fixed label clipping + overlaps), voice made, pushed for render"
+ ]
+}
