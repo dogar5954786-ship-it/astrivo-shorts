@@ -23,12 +23,14 @@
     "science",
     "shorts"
    ],
-   "status": "approved",
+   "status": "uploaded",
    "style": "flat",
    "voice_at": "2026-11-21T22:12+05:00",
    "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-21-1.mp4",
    "seconds": 42.5,
-   "publish_at": "2026-11-21T22:27:00+05:00"
+   "publish_at": "2026-11-21T22:27:00+05:00",
+   "youtube_id": "y1gZvLzLZy8",
+   "youtube_url": "https://youtube.com/shorts/y1gZvLzLZy8"
   }
  ],
  "review_thread_id": "1a1ff1cb9ac5e445",
@@ -44,6 +46,7 @@
   "2026-11-21T22:14+05:00 'Got it' reply sent in topics thread (msg 1a1ff185813fac7d)",
   "2026-11-21T22:17+05:00 2026-11-21-1 rendered (42.5 s), real video frames checked (hook, key hit, end) - ok",
   "2026-11-21T22:18+05:00 review email sent without attachment (file 28 MB > 25 MB), thread 1a1ff1cb9ac5e445",
-  "2026-11-21T23:09+05:00 'approve now' from Abdullah (msg 1a1ff261c59b3ba8, sent 22:27) -> approved, publish_at 22:27 PKT"
+  "2026-11-21T23:09+05:00 'approve now' from Abdullah (msg 1a1ff261c59b3ba8, sent 22:27) -> approved, publish_at 22:27 PKT",
+  "2026-11-21T23:10+05:00 uploaded 2026-11-21-1 to YouTube: https://youtube.com/shorts/y1gZvLzLZy8"
  ]
 }
