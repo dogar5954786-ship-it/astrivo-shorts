@@ -23,19 +23,24 @@
     "space",
     "shorts"
    ],
-   "status": "rendering",
+   "status": "review_sent",
    "style": "flat",
-   "voice_at": "2026-11-22T16:12+05:00"
+   "voice_at": "2026-11-22T16:12+05:00",
+   "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-22-2.mp4",
+   "seconds": 48.27
   }
  ],
- "review_thread_id": null,
+ "review_thread_id": "1a202f8aa39294bc",
  "seen_msgs": [
   "1a202dd670f3452d",
-  "1a202f567f8b6a2a"
+  "1a202f567f8b6a2a",
+  "1a202f8aa39294bc"
  ],
  "log": [
   "2026-11-22T16:08+05:00 Abdullah picked 2 (msg 1a202dd670f3452d, sent 15:46), no notes",
   "2026-11-22T16:13+05:00 job 2026-11-22-2 written (105 words, 10 segments; supermoon distances checked: Nov 24 full Moon 360,765 km, Dec 23 356,738 km, 2026 range 356,660-406,435 km per Farmers' Almanac; 14%/30% per Nat Geo), preview checked (fixed overlapping +14% label), voice made, pushed for render",
-  "2026-11-22T16:14+05:00 'Got it' reply sent in topics thread (msg 1a202f567f8b6a2a)"
+  "2026-11-22T16:14+05:00 'Got it' reply sent in topics thread (msg 1a202f567f8b6a2a)",
+  "2026-11-22T16:17+05:00 2026-11-22-2 rendered (48.3 s), real video frames checked (hook, key hit, end) - ok",
+  "2026-11-22T16:18+05:00 review email sent without attachment (file 29 MB > 25 MB), thread 1a202f8aa39294bc"
  ]
 }
