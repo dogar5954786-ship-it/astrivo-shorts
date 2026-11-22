@@ -1,0 +1,59 @@
+{
+ "id": "2026-11-22-2",
+ "style": "flat",
+ "title": "Why the Moon Looks Huge This Week",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20779/yhSwSB6vJG_31SQ0cTgibuUtPoy88pRuogUS6K6VhHLV1YAlKw53hqT3ZMote00oWDvUGt-7dDb8VWJ7O8OXSs7xCf-oyWPEmb0XXVE8TtFyb40fKogQ2-JAAurnVF91D9syBUfrqvkm2OezywnCfQTR0CsBzR3nX-aeHva--Z0",
+ "hook": {
+  "text": "WHY THE MOON\nLOOKS HUGE",
+  "y": 870
+ },
+ "highlight": [
+  "Moon",
+  "oval",
+  "farthest",
+  "closer",
+  "supermoon",
+  "bigger",
+  "brighter",
+  "rises",
+  "December",
+  "Tuesday",
+  "first"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 102
+ },
+ "segments": [
+  {
+   "text": "On Tuesday, the Moon gets closer to Earth!"
+  },
+  {
+   "text": "Its path around us isn't a circle. It's an oval."
+  },
+  {
+   "text": "At its farthest, the Moon is about 406,000 kilometers away."
+  },
+  {
+   "text": "But Tuesday's full Moon swings in to just 360,765 kilometers."
+  },
+  {
+   "text": "That's over 45,000 kilometers closer!"
+  },
+  {
+   "text": "A full Moon this close is called a supermoon."
+  },
+  {
+   "text": "Next to the smallest full Moon, it looks up to 14% bigger… and 30% brighter!"
+  },
+  {
+   "text": "The best time to look? Right as it rises, glowing low over the horizon."
+  },
+  {
+   "text": "And it's only the first. In December, it comes even closer, to 356,738 kilometers."
+  },
+  {
+   "text": "So on Tuesday, look up… the Moon is coming closer."
+  }
+ ]
+}

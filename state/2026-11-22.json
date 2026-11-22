@@ -1,0 +1,39 @@
+{
+ "date": "2026-11-22",
+ "topics_thread_id": "1a2007a1561f9e64",
+ "picks": [
+  2
+ ],
+ "notes": "",
+ "jobs": [
+  {
+   "id": "2026-11-22-2",
+   "topic_no": 2,
+   "title": "Why the Moon Looks Huge This Week",
+   "description": "This Tuesday (Nov 24) the full Moon swings 45,000 km closer than its farthest point. That makes it a supermoon: up to 14% bigger and 30% brighter than the smallest full Moon. Look up when it rises - and December's supermoon comes even closer!\n\n#supermoon #moon #space #science #shorts",
+   "tags": [
+    "supermoon",
+    "beaver moon",
+    "supermoon 2026",
+    "full moon november 2026",
+    "why the moon looks big",
+    "moon closer to earth",
+    "perigee",
+    "moon facts",
+    "space",
+    "shorts"
+   ],
+   "status": "rendering",
+   "style": "flat",
+   "voice_at": "2026-11-22T16:12+05:00"
+  }
+ ],
+ "review_thread_id": null,
+ "seen_msgs": [
+  "1a202dd670f3452d"
+ ],
+ "log": [
+  "2026-11-22T16:08+05:00 Abdullah picked 2 (msg 1a202dd670f3452d, sent 15:46), no notes",
+  "2026-11-22T16:13+05:00 job 2026-11-22-2 written (105 words, 10 segments; supermoon distances checked: Nov 24 full Moon 360,765 km, Dec 23 356,738 km, 2026 range 356,660-406,435 km per Farmers' Almanac; 14%/30% per Nat Geo), preview checked (fixed overlapping +14% label), voice made, pushed for render"
+ ]
+}
