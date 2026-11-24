@@ -23,57 +23,13 @@
       return hit ? hit.t0 : (fb == null ? t0 : fb);
     };
     T.wordEnd = (q, fromSeg = 0, fb) => { const t = T.word(q, fromSeg, -1); if (t < 0) return fb == null ? T.s(fromSeg) : fb; const w = tm.words.find((w) => Math.abs(w.t0 - t) < 1e-6); return w ? w.t1 : t; };
-    // ---- v3: beat-grid timing (no voice). T.b(i) beat start, T.bEnd(i), T.at(i,f), T.beat(n) music beat ----
-    if (tm.v3) {
-      const B = tm.beats || [];
-      T.nb = B.length;
-      T.bpm = tm.bpm || 100;
-      T.b = (i) => (B.length ? B[Math.max(0, Math.min(B.length - 1, i))].t0 : 0);
-      T.bEnd = (i) => (B.length ? B[Math.max(0, Math.min(B.length - 1, i))].t1 : T.D);
-      T.at = (i, f) => lerp(T.b(i), T.bEnd(i), f);
-      T.beat = (n) => (n * 60) / T.bpm;                       // time of music beat n
-      T.snap = (t) => Math.round(t / ((60 / T.bpm))) * (60 / T.bpm);   // nearest music beat
-      T.note = (i) => (B[i] && B[i].note) || '';
-    }
     return T;
-  }
-  const isV3 = () => !!(JOB && JOB.format === 'v3');
-
-  // ---------- v3: the persistent multi-colour title banner ----------
-  // Measured from the references: top edge y≈80, bottom y≈200 in this 720x1280 space
-  // (y 120-300 at 1080x1920). Each word takes the next colour in the cycle.
-  const BANNER_COLS = ['#F0AA17', '#FFFFFF', '#0EA9F3', '#CE05D8'];
-  function banner(x) {
-    const b = JOB.banner; if (!b || !b.lines || !b.lines.length) return;
-    const lines = b.lines.slice(0, 2).map((s) => String(s).toUpperCase());
-    const maxW = W * 0.74, top = b.y == null ? 80 : b.y;
-    let px = b.px || (lines.length > 1 ? 54 : 62);
-    const fit = (p) => { x.font = `italic 900 ${p}px ${L.FONT}`; return Math.max(...lines.map((l) => x.measureText(l).width)); };
-    while (fit(px) > maxW && px > 22) px -= 1;
-    const lh = px * 1.16, ci = { n: 0 };
-    x.save(); x.textBaseline = 'middle'; x.textAlign = 'left'; x.lineJoin = 'round';
-    lines.forEach((ln, li) => {
-      const words = ln.split(/\s+/).filter(Boolean);
-      x.font = `italic 900 ${px}px ${L.FONT}`;
-      const sp = x.measureText(' ').width;
-      const tot = words.reduce((a, w) => a + x.measureText(w).width, 0) + sp * (words.length - 1);
-      let wx = W / 2 - tot / 2;
-      const y = top + px * 0.6 + li * lh;
-      for (const w of words) {
-        const col = BANNER_COLS[ci.n++ % BANNER_COLS.length];
-        x.lineWidth = px * 0.26; x.strokeStyle = '#000000'; x.strokeText(w, wx, y);
-        x.fillStyle = 'rgba(0,0,0,0.5)'; x.fillText(w, wx + px * 0.035, y + px * 0.06);
-        x.fillStyle = col; x.fillText(w, wx, y);
-        wx += x.measureText(w).width + sp;
-      }
-    });
-    x.restore();
   }
 
   // ---------- the shared hook ----------
   const REW = 0.32;                      // rewind length (s)
   const hookEnd = () => (T.n > 1 ? T.s(1) : Math.min(2.5, T.D));
-  const coldAt = () => (isV3() ? null : (SC.cold ? SC.cold(T, L) : null));   // v3 never cold-opens
+  const coldAt = () => (SC.cold ? SC.cold(T, L) : null);
   // which scene time to draw at real time t
   function sceneTime(t) {
     const c = coldAt(); if (c == null) return { te: t, rew: 0 };
@@ -142,28 +98,15 @@
     t = Math.max(0, Math.min(T.D - 1e-3, t));
     const x = ctx; x.setTransform(scale, 0, 0, scale, 0, 0); x.globalAlpha = 1; x.globalCompositeOperation = 'source-over'; x.filter = 'none';
     const { te, rew } = sceneTime(t);
-    const v3 = isV3();
     x.save();
-    if (v3) {
-      // v3: the scene owns the camera (it should already be mid-action and pushing in).
-      // The runner only adds an impact shake on the opening hit.
-      if (t < 0.45) { x.translate(W / 2 + L.shake(t, 0, 11, 0.4), H_ / 2); x.translate(-W / 2, -H_ / 2); }
-    } else if (t < 0.6) {
-      // v2 frame-0 punch: start zoomed in and shaking, settle in 0.35 s
-      const z = 1 + 0.22 * (1 - eo(seg(t, 0, 0.35))); x.translate(W / 2 + L.shake(t, 0, 14, 0.5), H_ / 2); x.scale(z, z); x.translate(-W / 2, -H_ / 2);
-    }
+    // frame-0 punch: start zoomed in and shaking, settle in 0.35 s
+    if (t < 0.6) { const z = 1 + 0.22 * (1 - eo(seg(t, 0, 0.35))); x.translate(W / 2 + L.shake(t, 0, 14, 0.5), H_ / 2); x.scale(z, z); x.translate(-W / 2, -H_ / 2); }
     SC.draw(x, W, H_, te, T, L, { real: t, cold: coldAt() != null && t < hookEnd() });
     x.restore();
-    if (v3) {
-      // v3: a quick impact pop, NOT a white-out — frame 0 must show the action, not a flash
-      if (t < 0.05) L.flash(x, W, H_, 0.26 * (1 - t / 0.05));
-      banner(x);                       // always on, never animates
-    } else {
-      rewindFx(x, t, rew);
-      if (t < 0.1) L.flash(x, W, H_, 1 - t / 0.1);
-      hookTitle(x, t);
-      captions(x, t);
-    }
+    rewindFx(x, t, rew);
+    if (t < 0.1) L.flash(x, W, H_, 1 - t / 0.1);
+    hookTitle(x, t);
+    captions(x, t);
     L.finish(x, W, H_, t);
   }
 
@@ -186,16 +129,14 @@
   }
   function scoreStem(k, stem) {
     const D = T.D, h = hookEnd(), S = kitFx(k);
-    const v3 = isV3();
     if (stem === 'music') {
       const m = JOB.music || {};
-      // v3 has no voice to duck under, so the bed sits much louder and starts at full level.
-      k.music(m.kind || 'pulse', 0, D, { bpm: m.bpm || 100, gain: m.gain == null ? (v3 ? 0.9 : 0.55) : m.gain, chords: m.chords || [['A3', 'C4', 'E4', 'G4'], ['F3', 'A3', 'C4', 'E4'], ['C3', 'E3', 'G3', 'B3'], ['G3', 'B3', 'D4', 'F4']] });
+      k.music(m.kind || 'pulse', 0, D, { bpm: m.bpm || 100, gain: m.gain == null ? 0.55 : m.gain, chords: m.chords || [['A3', 'C4', 'E4', 'G4'], ['F3', 'A3', 'C4', 'E4'], ['C3', 'E3', 'G3', 'B3'], ['G3', 'B3', 'D4', 'F4']] });
       return;
     }
-    // frame-0 impact. v3 skips the title stamp and the cold-open rewind entirely.
+    // shared hook sounds: hit on frame 0, title stamp, rewind, landing whoosh
     k.play('impact', 0.0, { gain: 0.9 }); S.chord(0.0, ['A2', 'E3', 'A3', 'E4'], 1.2, 1.6);
-    if (!v3) k.play('stamp', 0.02, { gain: 0.6 });
+    k.play('stamp', 0.02, { gain: 0.6 });
     if (coldAt() != null) {
       k.noise(h - REW, { dur: REW + 0.05, color: 'pink', filter: 'bandpass', f: [[0, 3200], [REW, 400]], q: 1.4, gain: 0.32, a: 0.03 });
       k.tone(h - REW, { f: [[0, 900], [REW, 120]], type: 'sawtooth', dur: REW, gain: 0.05, filter: 'lowpass', f2: 1800 });

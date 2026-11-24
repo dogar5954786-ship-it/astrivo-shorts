@@ -11,8 +11,6 @@
 
   const C = {
     sky0: '#090b2c', sky1: '#18134f', sky2: '#3a1a6c',
-    space: '#00011B',                       // v3 flat background (measured)
-    vgreen: '#30F80A',                      // v3 counter green (measured)
     ink: '#141846',
     teal: ['#a4fbef', '#3ccbdc', '#1d64b0'],
     orange: ['#ffcc7a', '#ff8d3f', '#d24a2a'],
@@ -121,19 +119,12 @@
   }
   function sky(x, W, H_, t, cam = {}) {
     const px = cam.x || 0, py = cam.y || 0, lz = Math.log(cam.z || 1);
-    if (cam.dark) {
-      // v3: flat near-black navy (#00011B), measured from the references. Keeps the
-      // characters and the green counter popping instead of competing with the background.
-      x.fillStyle = C.space; x.fillRect(0, 0, W, H_);
-      glow(x, W * 0.5, H_ * 0.45, 820, '#0b1c5e', 0.16);
-    } else {
-      const g = x.createLinearGradient(0, 0, W * 0.5, H_);
-      g.addColorStop(0, C.sky0); g.addColorStop(0.5, C.sky1); g.addColorStop(1, C.sky2);
-      x.fillStyle = g; x.fillRect(0, 0, W, H_);
-      glow(x, W * 0.9, H_ * 0.1, 700, '#7b34c6', 0.34);
-      glow(x, W * 0.0, H_ * 0.95, 680, '#2448b4', 0.4);
-      glow(x, W * 0.5, H_ * 0.55, 560, '#4a2a9c', 0.16);
-    }
+    const g = x.createLinearGradient(0, 0, W * 0.5, H_);
+    g.addColorStop(0, C.sky0); g.addColorStop(0.5, C.sky1); g.addColorStop(1, C.sky2);
+    x.fillStyle = g; x.fillRect(0, 0, W, H_);
+    glow(x, W * 0.9, H_ * 0.1, 700, '#7b34c6', 0.34);
+    glow(x, W * 0.0, H_ * 0.95, 680, '#2448b4', 0.4);
+    glow(x, W * 0.5, H_ * 0.55, 560, '#4a2a9c', 0.16);
     const S = stars(W, H_);
     const place = (s) => {
       const k = Math.exp(lz * s.d * 0.6);
@@ -524,86 +515,8 @@
     x.restore();
   }
 
-  // ---------- face: the v3 character layer ----------
-  // Put an expressive face on any body: face(x, cx, cy, r, { mood, look, t, scale, squint })
-  // moods: calm | scared | angry | smug | happy | strain | pain
-  // Astrivo's own design: tall rounded-rect eyes, ink outline, chunky brows, rubbery mouth.
-  const FACE_INK = '#10122e';
-  function face(x, cx, cy, r, o = {}) {
-    if (r < 7) return;
-    const mood = o.mood || 'calm', t = o.t || 0, look = o.look || [0, 0];
-    const S = r * (o.scale == null ? 1 : o.scale);
-    const M = {           // eyeW eyeH browAng browY pupil openMouth mouthCurve  (tuned by eye)
-      calm:   { ew: 0.21, eh: 0.25, ba: 0.00, by: 0.00, pu: 0.50, om: 0.10, mc: 0.25, br: 0 },
-      scared: { ew: 0.25, eh: 0.31, ba: -0.38, by: -0.07, pu: 0.30, om: 0.85, mc: -0.5, br: 1 },
-      angry:  { ew: 0.22, eh: 0.19, ba: 0.62, by: 0.03, pu: 0.62, om: 0.22, mc: -0.7, br: 1 },
-      smug:   { ew: 0.21, eh: 0.15, ba: 0.22, by: 0.02, pu: 0.55, om: 0.00, mc: 0.85, br: 1 },
-      happy:  { ew: 0.22, eh: 0.26, ba: 0.00, by: 0.00, pu: 0.50, om: 0.55, mc: 1.00, br: 0 },
-      // strain = effort: eyes narrowed but OPEN, hard brows, gritted teeth.
-      // (Shut eyes here read as "asleep", which kills the hook.)
-      strain: { ew: 0.23, eh: 0.13, ba: 0.55, by: 0.02, pu: 0.60, om: 0.00, mc: 0, br: 1, grit: 1 },
-      pain:   { ew: 0.24, eh: 0.09, ba: -0.30, by: -0.04, pu: 0.50, om: 0.95, mc: -0.6, br: 1 },
-    }[mood] || null;
-    if (!M) return;
-    const ex = S * 0.33, ey = -S * 0.05 + M.by * S;
-    const blink = o.blink != null ? o.blink : (mood === 'calm' || mood === 'happy' ? blinkAt(t, cx * 0.01) : 0);
-    const shut = mood === 'pain';
-    x.save(); x.translate(cx, cy);
-    // eyes
-    for (const sd of [-1, 1]) {
-      const w = S * M.ew, h = S * M.eh * (shut ? 1 : 1 - 0.9 * blink);
-      x.save(); x.translate(sd * ex, ey);
-      if (mood === 'happy' && !blink) {                       // happy: upward arcs
-        x.strokeStyle = '#ffffff'; x.lineWidth = S * 0.075; x.lineCap = 'round';
-        x.beginPath(); x.arc(0, h * 0.3, w * 0.9, Math.PI * 1.12, Math.PI * 1.88); x.stroke();
-      } else if (shut) {                                      // squeezed shut: downward arcs
-        x.strokeStyle = FACE_INK; x.lineWidth = S * 0.07; x.lineCap = 'round';
-        x.beginPath(); x.arc(0, -h * 0.2, w * 0.85, Math.PI * 0.15, Math.PI * 0.85); x.stroke();
-      } else {
-        x.fillStyle = FACE_INK; rr(x, -w - S * 0.022, -h - S * 0.022, (w + S * 0.022) * 2, (h + S * 0.022) * 2, w * 0.85); x.fill();
-        x.fillStyle = '#ffffff'; rr(x, -w, -h, w * 2, h * 2, w * 0.8); x.fill();
-        const pr = Math.min(w, h) * M.pu;
-        x.fillStyle = FACE_INK;
-        x.beginPath(); x.arc(look[0] * (w - pr) * 0.9, look[1] * (h - pr) * 0.9, pr, 0, TAU); x.fill();
-        x.fillStyle = 'rgba(255,255,255,0.9)';
-        x.beginPath(); x.arc(look[0] * (w - pr) * 0.9 - pr * 0.33, look[1] * (h - pr) * 0.9 - pr * 0.38, pr * 0.3, 0, TAU); x.fill();
-      }
-      x.restore();
-    }
-    // brows
-    if (M.br) {
-      x.strokeStyle = FACE_INK; x.lineWidth = S * 0.075; x.lineCap = 'round';
-      for (const sd of [-1, 1]) {
-        const by = ey - S * (M.eh + 0.14), bw = S * 0.23, a = M.ba * sd;
-        x.save(); x.translate(sd * ex, by); x.rotate(a);
-        x.beginPath(); x.moveTo(-bw, 0); x.lineTo(bw, 0); x.stroke(); x.restore();
-      }
-    }
-    // mouth
-    const my = S * 0.42, mw = S * 0.3;
-    x.save(); x.translate(0, my);
-    if (M.grit) {                                              // gritted teeth: effort
-      const w = mw * 0.95, h = S * 0.12;
-      x.fillStyle = FACE_INK; rr(x, -w, -h, w * 2, h * 2, h * 0.45); x.fill();
-      x.fillStyle = '#ffffff'; rr(x, -w * 0.88, -h * 0.72, w * 1.76, h * 1.44, h * 0.3); x.fill();
-      x.strokeStyle = FACE_INK; x.lineWidth = S * 0.028;
-      x.beginPath(); x.moveTo(-w * 0.88, 0); x.lineTo(w * 0.88, 0); x.stroke();
-      for (let i = -2; i <= 2; i++) { x.beginPath(); x.moveTo(i * w * 0.35, -h * 0.72); x.lineTo(i * w * 0.35, h * 0.72); x.stroke(); }
-    } else if (M.om > 0.3) {                                   // open mouth + tongue
-      const h = S * 0.22 * M.om, w = mw * (0.75 + 0.3 * M.om);
-      x.fillStyle = FACE_INK; x.beginPath(); x.ellipse(0, 0, w, h, 0, 0, TAU); x.fill();
-      x.fillStyle = '#e4486b'; x.beginPath(); x.ellipse(0, h * 0.42, w * 0.56, h * 0.42, 0, 0, TAU); x.fill();
-    } else {                                                    // closed line / smirk
-      x.strokeStyle = FACE_INK; x.lineWidth = S * 0.07; x.lineCap = 'round';
-      const c = M.mc * S * 0.2, off = mood === 'smug' ? mw * 0.25 : 0;
-      x.beginPath(); x.moveTo(-mw * 0.8 + off, 0); x.quadraticCurveTo(off, c, mw * 0.8 + off, mood === 'smug' ? -c * 0.5 : 0); x.stroke();
-    }
-    x.restore();
-    x.restore();
-  }
-
   window.FLAT = {
-    TAU, cl, lerp, seg, eo, eio, back, F, FONT, C, PL, face,
+    TAU, cl, lerp, seg, eo, eio, back, F, FONT, C, PL,
     rr, glow, spark, crescent, ball, bez, arrow, line, text, pill, flare, burst,
     sky, bands, atmo, planet, ring, moonGlow, earth, continents, city, water, finish,
     sun, streaks, blackhole, rock, trail, eye, blinkAt, buddy, badge,
