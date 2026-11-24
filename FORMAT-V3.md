@@ -136,6 +136,24 @@ This is the biggest animation change. **We were cutting far too much.** Measured
 - **Allowed cuts:** one hard cut into the climax (with a white flash), and at most one cross-section
   reveal cut. That is it.
 - **Never a still frame.** Even in the calm middle, something drifts, spins, breathes or sparkles.
+
+### How much motion, measured
+`tools/check_v3.py <rendered.mp4>` measures mean frame-to-frame change and fails a Short that
+sits too still. Targets, taken from the references: **no single second below 1.5**, **whole-Short
+average at or above 4.0**.
+
+What actually moves that number, learned the hard way while building the reference Short:
+1. **Subject size dominates.** Small objects on a black field barely register however fast the
+   camera moves. Scaling the characters up moved our demo from 2.3 to 2.9 with no other change.
+   **Fill the frame with the characters** — in the references a single planet's face often covers
+   more than half the screen.
+2. **Events beat oscillation.** A sine-wave drift produces jitter, not life. What registers is a
+   character being yanked, squashed, hit, or swapped for another one. Put a real physical event
+   every 1–2 seconds.
+3. **Reframe often.** Pan from one character to another, push in on a face, pull out to a lineup.
+   A locked-off frame scores badly even when things inside it move.
+4. A drifting dust layer and a faster planet spin help a little, but they cannot rescue a scene
+   whose subjects are small and parked.
 - **End wide.** The final beat is usually a pull-back that shows the whole comparison at once, held
   for ~1.5–2 s. Viewers loop to read it, which is free watch time.
 

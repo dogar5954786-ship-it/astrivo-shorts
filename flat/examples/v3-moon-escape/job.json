@@ -1,0 +1,18 @@
+{
+  "id": "v3-moon-escape",
+  "style": "flat",
+  "format": "v3",
+  "title": "The Moon Is Running Away",
+  "banner": { "lines": ["THE MOON IS", "RUNNING AWAY"] },
+  "duration": 18.0,
+  "music": { "kind": "pulse", "bpm": 100, "gain": 0.9 },
+  "beats": [
+    { "id": "b1", "t": 0.0,  "note": "MID-ACTION: rope already snapped taut, Moon yanking away, Earth squashed and dragged. Hard push-in." },
+    { "id": "b2", "t": 2.4,  "note": "Earth digs in and strains. Moon pulls again, gains a notch.", "number": "3.8 CM / YEAR" },
+    { "id": "b3", "t": 5.4,  "note": "Pull back: the gap is visibly bigger. Earth angry, Moon smug.", "number": "1 MILLION YEARS" },
+    { "id": "b4", "t": 8.0,  "note": "Earth's spin drags slower; day stretches. Earth straining.", "label": "LONGER DAYS" },
+    { "id": "b5", "t": 10.4, "note": "Sun slides in. Moon still just covers it: total eclipse. Earth happy.", "label": "TOTAL ECLIPSE" },
+    { "id": "b6", "t": 13.0, "note": "Moon now too small. Ring of fire breaks out around it. Earth scared.", "number": "600 MILLION YEARS" },
+    { "id": "b7", "t": 15.4, "note": "CLIMAX + PAYOFF: ring of fire blazes, flash, then wide shot — tiny Moon far away, Earth alone. Loops to b1." }
+  ]
+}

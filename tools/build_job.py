@@ -127,7 +127,57 @@ def estimate_words(tokens, wps=2.75):
     return out, t + 0.2
 
 
+def build_v3(job, job_dir, args):
+    """v3 Shorts have no voiceover: timing comes from the beat grid, not from spoken words."""
+    jid = job["id"]
+    work = os.path.join(ROOT, "build", jid)
+    os.makedirs(work, exist_ok=True)
+    preview = "--preview" in args
+    bpm = float(job.get("music", {}).get("bpm", 100))
+    beats_in = job.get("beats") or []
+    if not beats_in:
+        raise SystemExit("v3 job needs a non-empty \"beats\" list in job.json")
+    D = float(job.get("duration", 0)) or (float(beats_in[-1]["t"]) + 2.5)
+    if not (10.0 <= D <= 26.0):
+        print(f"WARNING: duration {D}s is outside the v3 range of 15-22s (hard max 25)", flush=True)
+    D = math.ceil(D * FPS) / FPS
+    beats = []
+    for i, b in enumerate(beats_in):
+        t0 = float(b["t"])
+        t1 = float(beats_in[i + 1]["t"]) if i + 1 < len(beats_in) else D
+        beats.append({"i": i, "t0": round(t0, 3), "t1": round(t1, 3), "note": b.get("note", ""),
+                      "number": b.get("number"), "label": b.get("label")})
+    timing = {
+        "D": D, "v3": True, "bpm": bpm, "beats": beats,
+        # mirrored as segs so any shared code path still has something sane to read
+        "segs": [{"i": b["i"], "t0": b["t0"], "t1": b["t1"], "text": b["note"]} for b in beats],
+        "words": [], "caps": [],
+    }
+    tpath = os.path.join(work, "timing.json")
+    json.dump(timing, open(tpath, "w"), indent=1)
+    rel = lambda p: os.path.relpath(p, ROOT)
+    renderer = os.path.join(ROOT, "flat", "render.mjs")
+    if preview:
+        sheet = os.path.join(work, "sheet.png")
+        cmd = ["node", renderer, "--job", rel(job_dir), "--timing", rel(tpath), "--sheet", sheet]
+        if "--frames" in args:
+            cmd += ["--frames", args[args.index("--frames") + 1]]
+        sh(*cmd)
+        print("PREVIEW", sheet, flush=True)
+        return
+    os.makedirs(os.path.join(ROOT, "out"), exist_ok=True)
+    final = os.path.join(ROOT, "out", f"{jid}.mp4")
+    # no --voice: render.mjs substitutes silence and the mix still lands at -14 LUFS
+    sh("node", renderer, "--job", rel(job_dir), "--timing", rel(tpath), "--out", final)
+    res = {"status": "rendered", "id": jid, "style": "flat", "format": "v3",
+           "seconds": round(duration(final), 2), "file": f"{jid}.mp4"}
+    json.dump(res, open(os.path.join(job_dir, "result.json"), "w"), indent=1)
+    print("DONE", final, res["seconds"], "s", flush=True)
+
+
 def build_flat(job, job_dir, args):
+    if job.get("format") == "v3":
+        return build_v3(job, job_dir, args)
     jid = job["id"]
     work = os.path.join(ROOT, "build", jid)
     os.makedirs(work, exist_ok=True)

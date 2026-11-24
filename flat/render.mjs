@@ -85,7 +85,10 @@ const vin = voice ? ['-i', voice] : ['-f', 'lavfi', '-t', String(D), '-i', 'anul
 const fc = '[1:a]aresample=48000,aformat=channel_layouts=stereo,apad,asplit=2[v][vsc];' +
   '[2:a][vsc]sidechaincompress=threshold=0.02:ratio=10:attack=10:release=350:makeup=1[m];' +
   '[m]volume=0.75[m2];[3:a]volume=0.9[s];[v]volume=1.0[v2];' +
-  '[v2][m2][s]amix=inputs=3:normalize=0:duration=longest,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]';
+  // single-pass loudnorm is dynamic and can overshoot into clipping (we measured +2.8 dBTP on a
+  // v3 mix), so a true-peak limiter follows it. References sit at -14 LUFS / about -1.7 dBTP.
+  '[v2][m2][s]amix=inputs=3:normalize=0:duration=longest,loudnorm=I=-14:TP=-1.5:LRA=11,' +
+  'alimiter=limit=0.84:attack=5:release=60:level=disabled,aresample=48000[a]';
 const r = spawnSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', silent, ...vin, ...raw('music.f32'), ...raw('sfx.f32'),
   '-filter_complex', fc, '-map', '0:v', '-map', '[a]', '-t', D.toFixed(3), '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', out], { stdio: 'inherit' });
 if (r.status !== 0) process.exit(r.status || 1);
