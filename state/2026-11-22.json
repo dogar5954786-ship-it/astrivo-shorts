@@ -1,68 +1,69 @@
 {
- "date": "2026-11-22",
- "topics_thread_id": "1a2007a1561f9e64",
- "picks": [
-  2
- ],
- "notes": "",
- "jobs": [
-  {
-   "id": "2026-11-22-2",
-   "topic_no": 2,
-   "title": "Why the Moon Looks Huge This Week",
-   "description": "This Tuesday (Nov 24) the full Moon swings 45,000 km closer than its farthest point. That makes it a supermoon: up to 14% bigger and 30% brighter than the smallest full Moon. Look up when it rises - and December's supermoon comes even closer!\n\n#supermoon #moon #space #science #shorts",
-   "tags": [
-    "supermoon",
-    "beaver moon",
-    "supermoon 2026",
-    "full moon november 2026",
-    "why the moon looks big",
-    "moon closer to earth",
-    "perigee",
-    "moon facts",
-    "space",
-    "shorts"
-   ],
-   "status": "upload_failed",
-   "style": "flat",
-   "voice_at": "2026-11-22T16:12+05:00",
-   "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-22-2.mp4",
-   "seconds": 48.27,
-   "publish_at": "2026-11-22T20:00:00+05:00",
-   "upload_attempts": 3,
-   "last_upload_error": "429 Too Many Requests (attempts 23:11 Nov 24, 05:11 and 06:12 PKT Nov 25)"
-  }
- ],
- "review_thread_id": "1a202f8aa39294bc",
- "seen_msgs": [
-  "1a202dd670f3452d",
-  "1a202f567f8b6a2a",
-  "1a202f8aa39294bc",
-  "1a202fa5a0f3d042",
-  "1a203285e18f2233",
-  "1a20411c0969a829",
-  "1a20ec0667b8b09f"
- ],
- "log": [
-  "2026-11-22T16:08+05:00 Abdullah picked 2 (msg 1a202dd670f3452d, sent 15:46), no notes",
-  "2026-11-22T16:13+05:00 job 2026-11-22-2 written (105 words, 10 segments; supermoon distances checked: Nov 24 full Moon 360,765 km, Dec 23 356,738 km, 2026 range 356,660-406,435 km per Farmers' Almanac; 14%/30% per Nat Geo), preview checked (fixed overlapping +14% label), voice made, pushed for render",
-  "2026-11-22T16:14+05:00 'Got it' reply sent in topics thread (msg 1a202f567f8b6a2a)",
-  "2026-11-22T16:17+05:00 2026-11-22-2 rendered (48.3 s), real video frames checked (hook, key hit, end) - ok",
-  "2026-11-22T16:18+05:00 review email sent without attachment (file 29 MB > 25 MB), thread 1a202f8aa39294bc",
-  "2026-11-22T17:09+05:00 'approve 8 PM' from Abdullah (msg 1a202fa5a0f3d042, sent 16:18) -> approved, publish_at 20:00 PKT",
-  "2026-11-22T17:10+05:00 schedule confirmation sent in review thread (msg 1a203285e18f2233)",
-  "2026-11-24T23:08+05:00 no bot runs since 2026-11-22 17:10; 8 PM upload missed. No topics emails found for 11-23 / 11-24",
-  "2026-11-24T23:08+05:00 Abdullah asked 'Why didn't video yet uploaded' (msg 1a20411c0969a829, 11-22 21:23); checked channel - not uploaded",
-  "2026-11-24T23:11+05:00 upload attempt 1 failed: Zapier/YouTube 429 Too Many Requests (retried once after 70 s, same). Kept 'approved'",
-  "2026-11-24T23:12+05:00 explained delay in review thread (msg 1a20ec0667b8b09f); told him he can upload manually and reply 'uploaded' - if he does, set status 'uploaded' (manual) and do NOT upload. Next run: check channel for the title before retrying upload",
-  "2026-11-25T05:08+05:00 checked review thread - no new reply from Abdullah; checked channel - video not uploaded yet",
-  "2026-11-25T05:11+05:00 upload attempt 2 failed: Zapier/YouTube 429 Too Many Requests (retried once after 90 s, same). Channel re-checked: not uploaded. Kept 'approved'. No topics reply for 11-25 yet",
-  "2026-11-25T06:12+05:00 no new replies in review thread; channel checked - not uploaded; upload attempt 3 failed: 429 Too Many Requests -> status upload_failed",
-  "2026-11-25T06:13+05:00 problem email sent (thread 1a21041054d0efbb): suggested manual upload / check Zapier YouTube connection; told him to reply \"retry upload\" there if he wants another try. Topics 11-25 has no reply yet",
-  "2026-11-25T08:10+05:00 quiet run: no reply in topics 11-25, review or problem thread; nothing to do",
-  "2026-11-25T09:10+05:00 quiet run: no reply in topics 11-25, review or problem thread; nothing to do"
- ],
- "delay_notice_sent": "2026-11-24T23:12+05:00",
- "problem_email_sent": "2026-11-25T06:13+05:00",
- "problem_thread_id": "1a21041054d0efbb"
+  "date": "2026-11-22",
+  "topics_thread_id": "1a2007a1561f9e64",
+  "picks": [
+    2
+  ],
+  "notes": "",
+  "jobs": [
+    {
+      "id": "2026-11-22-2",
+      "topic_no": 2,
+      "title": "Why the Moon Looks Huge This Week",
+      "description": "This Tuesday (Nov 24) the full Moon swings 45,000 km closer than its farthest point. That makes it a supermoon: up to 14% bigger and 30% brighter than the smallest full Moon. Look up when it rises - and December's supermoon comes even closer!\n\n#supermoon #moon #space #science #shorts",
+      "tags": [
+        "supermoon",
+        "beaver moon",
+        "supermoon 2026",
+        "full moon november 2026",
+        "why the moon looks big",
+        "moon closer to earth",
+        "perigee",
+        "moon facts",
+        "space",
+        "shorts"
+      ],
+      "status": "upload_failed",
+      "style": "flat",
+      "voice_at": "2026-11-22T16:12+05:00",
+      "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-22-2.mp4",
+      "seconds": 48.27,
+      "publish_at": "2026-11-22T20:00:00+05:00",
+      "upload_attempts": 3,
+      "last_upload_error": "429 Too Many Requests (attempts 23:11 Nov 24, 05:11 and 06:12 PKT Nov 25)"
+    }
+  ],
+  "review_thread_id": "1a202f8aa39294bc",
+  "seen_msgs": [
+    "1a202dd670f3452d",
+    "1a202f567f8b6a2a",
+    "1a202f8aa39294bc",
+    "1a202fa5a0f3d042",
+    "1a203285e18f2233",
+    "1a20411c0969a829",
+    "1a20ec0667b8b09f"
+  ],
+  "log": [
+    "2026-11-22T16:08+05:00 Abdullah picked 2 (msg 1a202dd670f3452d, sent 15:46), no notes",
+    "2026-11-22T16:13+05:00 job 2026-11-22-2 written (105 words, 10 segments; supermoon distances checked: Nov 24 full Moon 360,765 km, Dec 23 356,738 km, 2026 range 356,660-406,435 km per Farmers' Almanac; 14%/30% per Nat Geo), preview checked (fixed overlapping +14% label), voice made, pushed for render",
+    "2026-11-22T16:14+05:00 'Got it' reply sent in topics thread (msg 1a202f567f8b6a2a)",
+    "2026-11-22T16:17+05:00 2026-11-22-2 rendered (48.3 s), real video frames checked (hook, key hit, end) - ok",
+    "2026-11-22T16:18+05:00 review email sent without attachment (file 29 MB > 25 MB), thread 1a202f8aa39294bc",
+    "2026-11-22T17:09+05:00 'approve 8 PM' from Abdullah (msg 1a202fa5a0f3d042, sent 16:18) -> approved, publish_at 20:00 PKT",
+    "2026-11-22T17:10+05:00 schedule confirmation sent in review thread (msg 1a203285e18f2233)",
+    "2026-11-24T23:08+05:00 no bot runs since 2026-11-22 17:10; 8 PM upload missed. No topics emails found for 11-23 / 11-24",
+    "2026-11-24T23:08+05:00 Abdullah asked 'Why didn't video yet uploaded' (msg 1a20411c0969a829, 11-22 21:23); checked channel - not uploaded",
+    "2026-11-24T23:11+05:00 upload attempt 1 failed: Zapier/YouTube 429 Too Many Requests (retried once after 70 s, same). Kept 'approved'",
+    "2026-11-24T23:12+05:00 explained delay in review thread (msg 1a20ec0667b8b09f); told him he can upload manually and reply 'uploaded' - if he does, set status 'uploaded' (manual) and do NOT upload. Next run: check channel for the title before retrying upload",
+    "2026-11-25T05:08+05:00 checked review thread - no new reply from Abdullah; checked channel - video not uploaded yet",
+    "2026-11-25T05:11+05:00 upload attempt 2 failed: Zapier/YouTube 429 Too Many Requests (retried once after 90 s, same). Channel re-checked: not uploaded. Kept 'approved'. No topics reply for 11-25 yet",
+    "2026-11-25T06:12+05:00 no new replies in review thread; channel checked - not uploaded; upload attempt 3 failed: 429 Too Many Requests -> status upload_failed",
+    "2026-11-25T06:13+05:00 problem email sent (thread 1a21041054d0efbb): suggested manual upload / check Zapier YouTube connection; told him to reply \"retry upload\" there if he wants another try. Topics 11-25 has no reply yet",
+    "2026-11-25T08:10+05:00 quiet run: no reply in topics 11-25, review or problem thread; nothing to do",
+    "2026-11-25T09:10+05:00 quiet run: no reply in topics 11-25, review or problem thread; nothing to do",
+    "2026-11-25T10:10+05:00 quiet run: no reply in topics 11-25, review or problem thread; nothing to do"
+  ],
+  "delay_notice_sent": "2026-11-24T23:12+05:00",
+  "problem_email_sent": "2026-11-25T06:13+05:00",
+  "problem_thread_id": "1a21041054d0efbb"
 }
