@@ -29,8 +29,8 @@
    "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-22-2.mp4",
    "seconds": 48.27,
    "publish_at": "2026-11-22T20:00:00+05:00",
-   "upload_attempts": 1,
-   "last_upload_error": "429 Too Many Requests (twice, 23:09 and 23:11 PKT Nov 24)"
+   "upload_attempts": 2,
+   "last_upload_error": "429 Too Many Requests (twice, 05:09 and 05:11 PKT Nov 25)"
   }
  ],
  "review_thread_id": "1a202f8aa39294bc",
@@ -54,7 +54,9 @@
   "2026-11-24T23:08+05:00 no bot runs since 2026-11-22 17:10; 8 PM upload missed. No topics emails found for 11-23 / 11-24",
   "2026-11-24T23:08+05:00 Abdullah asked 'Why didn't video yet uploaded' (msg 1a20411c0969a829, 11-22 21:23); checked channel - not uploaded",
   "2026-11-24T23:11+05:00 upload attempt 1 failed: Zapier/YouTube 429 Too Many Requests (retried once after 70 s, same). Kept 'approved'",
-  "2026-11-24T23:12+05:00 explained delay in review thread (msg 1a20ec0667b8b09f); told him he can upload manually and reply 'uploaded' - if he does, set status 'uploaded' (manual) and do NOT upload. Next run: check channel for the title before retrying upload"
+  "2026-11-24T23:12+05:00 explained delay in review thread (msg 1a20ec0667b8b09f); told him he can upload manually and reply 'uploaded' - if he does, set status 'uploaded' (manual) and do NOT upload. Next run: check channel for the title before retrying upload",
+  "2026-11-25T05:08+05:00 checked review thread - no new reply from Abdullah; checked channel - video not uploaded yet",
+  "2026-11-25T05:11+05:00 upload attempt 2 failed: Zapier/YouTube 429 Too Many Requests (retried once after 90 s, same). Channel re-checked: not uploaded. Kept 'approved'. No topics reply for 11-25 yet"
  ],
  "delay_notice_sent": "2026-11-24T23:12+05:00"
 }
