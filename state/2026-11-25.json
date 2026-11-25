@@ -40,7 +40,8 @@
     "1a2126970f51fdab",
     "1a2126da7978e948",
     "1a2127dcff9521c7",
-    "1a2129b83d7aa691"
+    "1a2129b83d7aa691",
+    "1a2130aa77f49242"
   ],
   "log": [
     "2026-11-25T16:09+05:00 Abdullah picked 3 (msg 1a21239496ba40a4, sent 15:21), no notes",
@@ -51,6 +52,7 @@
     "2026-11-25T17:10+05:00 'approve 7 PM' from Abdullah (msg 1a2127dcff9521c7, sent 16:35) -> approved, publish_at 19:00 PKT",
     "2026-11-25T17:11+05:00 schedule confirmation sent in review thread (msg 1a2129b83d7aa691)",
     "2026-11-25T19:08+05:00 no new replies in review 11-25, review 11-22 or problem 11-22 threads; channel checked - not uploaded yet",
-    "2026-11-25T19:09+05:00 uploaded 2026-11-25-3 to YouTube: https://youtube.com/shorts/Iz-k1lbsv3M"
+    "2026-11-25T19:09+05:00 uploaded 2026-11-25-3 to YouTube: https://youtube.com/shorts/Iz-k1lbsv3M",
+    "2026-11-25T19:10+05:00 upload confirmation sent in review thread (msg 1a2130aa77f49242)"
   ]
 }
