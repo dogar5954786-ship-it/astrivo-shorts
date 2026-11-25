@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-25",
+  "topics_thread_id": "1a20fed0a93c1aca",
+  "picks": [
+    3
+  ],
+  "notes": "",
+  "jobs": [
+    {
+      "id": "2026-11-25-3",
+      "topic_no": 3,
+      "title": "What If Earth Was Hollow?",
+      "description": "Scoop out everything under Earth's thin crust and over 99% of the planet's mass is gone. Gravity would drop so low you'd weigh less than a soda can, and inside the empty shell you'd float. But our air would leak away into space!\n\n#hollowearth #earth #space #science #shorts",
+      "tags": [
+        "what if earth was hollow",
+        "hollow earth",
+        "what if",
+        "earth",
+        "gravity",
+        "shell theorem",
+        "earth core",
+        "space facts",
+        "science",
+        "shorts"
+      ],
+      "status": "rendering",
+      "style": "flat",
+      "voice_at": "2026-11-25T16:13+05:00"
+    }
+  ],
+  "review_thread_id": null,
+  "seen_msgs": [
+    "1a21239496ba40a4"
+  ],
+  "log": [
+    "2026-11-25T16:09+05:00 Abdullah picked 3 (msg 1a21239496ba40a4, sent 15:21), no notes",
+    "2026-11-25T16:13+05:00 job 2026-11-25-3 written (107 words, 10 segments; facts: crust 5-70 km, crust ~0.47% of Earth's mass -> surface gravity ~0.5%, 70 kg -> ~0.33 kg, 0.4 m jump -> ~85 m, shell theorem, escape speed ~0.74 km/s vs Moon 2.4 km/s, magnetic field from the liquid iron outer core), preview checked (moved 0 g label off the ring, darker ground under captions, bigger soda can), voice made, pushed for render"
+  ]
+}

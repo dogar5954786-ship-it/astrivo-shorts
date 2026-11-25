@@ -1,0 +1,59 @@
+{
+ "id": "2026-11-25-3",
+ "style": "flat",
+ "title": "What If Earth Was Hollow?",
+ "voice_url": "https://zapier-dev-files.s3.amazonaws.com/cli-platform/20782/8M4ThEDAndGWENNYZJlg0xTOLgeus5vjWQOR3Y772_SFbq-rnj7cjwMTcWuqv1gfPrmnDBSQqILMvvsfNJJ8pq0W97-fTl7XKo03yMvQY_L0u01L7Sr3MeWJKM646ubWMwsRNQWLMKx6tdupfksjDm-BrxeSaNVvvkFN6tAIOyU",
+ "hook": {
+  "text": "WHAT IF EARTH\nWAS HOLLOW?",
+  "y": 300
+ },
+ "highlight": [
+  "empty",
+  "crust",
+  "center",
+  "mass",
+  "soda",
+  "float",
+  "cancels",
+  "air",
+  "shield",
+  "core",
+  "breathe"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 102
+ },
+ "segments": [
+  {
+   "text": "What if Earth was completely empty inside?"
+  },
+  {
+   "text": "Earth's crust is just 5 to 70 kilometers thick."
+  },
+  {
+   "text": "Now scoop out everything below it, all the way to the center."
+  },
+  {
+   "text": "You just deleted over 99% of Earth's mass."
+  },
+  {
+   "text": "Gravity collapses. A 70 kilogram person would weigh less than a soda can."
+  },
+  {
+   "text": "Jump, and you'd soar 80 meters high."
+  },
+  {
+   "text": "Fall through a crack, and you float, because inside a hollow shell, gravity cancels out everywhere."
+  },
+  {
+   "text": "But with gravity this weak, our air would leak away into space."
+  },
+  {
+   "text": "And without the hot iron core, there's no magnetic shield."
+  },
+  {
+   "text": "So that heavy, burning core under your feet? It's why you can breathe."
+  }
+ ]
+}
