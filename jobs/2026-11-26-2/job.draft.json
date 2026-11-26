@@ -1,0 +1,60 @@
+{
+ "id": "2026-11-26-2",
+ "style": "flat",
+ "title": "How Many Earths Fit in Each Planet?",
+ "voice_url": "",
+ "hook": {
+  "text": "HOW MANY EARTHS\nFIT INSIDE?",
+  "y": 880
+ },
+ "highlight": [
+  "Earths",
+  "Mercury",
+  "Mars",
+  "Neptune",
+  "Uranus",
+  "Saturn",
+  "Jupiter",
+  "king",
+  "Sun",
+  "Jupiters",
+  "big",
+  "million"
+ ],
+ "music": {
+  "kind": "pulse",
+  "bpm": 104
+ },
+ "segments": [
+  {
+   "text": "1,321 Earths could fit inside this one planet."
+  },
+  {
+   "text": "Let's fill every planet with Earths, from the smallest to the biggest."
+  },
+  {
+   "text": "Mercury can't hold even one. Earth could swallow 18 Mercurys!"
+  },
+  {
+   "text": "Mars? Still too small. About 7 Mars fit inside Earth."
+  },
+  {
+   "text": "Now the giants. Neptune holds 57 Earths. Uranus, 63."
+  },
+  {
+   "text": "Saturn, with its giant rings? 764 Earths fit inside!"
+  },
+  {
+   "text": "But Jupiter is the king. 1,321 Earths, packed inside one planet!"
+  },
+  {
+   "text": "Yet even Jupiter looks tiny next to the Sun."
+  },
+  {
+   "text": "The Sun could hold 1.3 million Earths,"
+  },
+  {
+   "text": "or about 1,000 Jupiters. Still think Earth is big?"
+  }
+ ]
+}
