@@ -40,7 +40,8 @@
     "2026-11-26T22:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No new replies in topics or problem threads. Problem email already sent - not repeated",
     "2026-11-26T23:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No new replies in topics or problem threads. Problem email already sent - not repeated",
     "2026-11-27T05:12+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics/problem threads; 2026-11-27 topics email has no reply yet. Problem email already sent - not repeated",
-    "2026-11-27T06:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27 or problem threads. Problem email already sent - not repeated"
+    "2026-11-27T06:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27 or problem threads. Problem email already sent - not repeated",
+    "2026-11-27T07:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27 (thread 1a21a3a82cc71378) or problem threads. Problem email already sent - not repeated"
   ],
   "problem_email_sent": "elevenlabs",
   "problem_thread_id": "1a218a552687753b"
