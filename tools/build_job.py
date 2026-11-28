@@ -108,7 +108,7 @@ def chunk_captions(words, max_words=3, max_chars=16):
     out = []
     for c in chunks:
         txt = " ".join(x[0] for x in c)
-        txt = re.sub(r"[;:.\"“”]+", "", txt)
+        txt = re.sub(r"[;:\"“”]+|\.(?!\d)", "", txt)   # keep dots inside numbers (1.3)
         txt = re.sub(r",(?!\d)", "", txt).replace("  ", " ").strip()   # keep commas inside numbers (384,400)
         out.append({"text": txt, "t0": c[0][1], "t1": c[-1][2]})
     for i in range(len(out) - 1):  # hold each caption until the next one starts (no flicker)

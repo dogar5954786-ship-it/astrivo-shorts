@@ -60,7 +60,8 @@
     "2026-11-27T22:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27 or problem threads. Problem email already sent - not repeated",
     "2026-11-27T23:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27 or problem threads. Problem email already sent - not repeated",
     "2026-11-28T05:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27/11-28 (thread 1a21f610240f3859) or problem threads. Problem email already sent - not repeated",
-    "2026-11-28T06:08+05:00 ElevenLabs works again - voice made, job.draft.json -> job.json, pushed for render. Gmail and YouTube Zapier connections are missing this run (only ElevenLabs connected) - 'Got it' reply not sent, emails blocked"
+    "2026-11-28T06:08+05:00 ElevenLabs works again - voice made, job.draft.json -> job.json, pushed for render. Gmail and YouTube Zapier connections are missing this run (only ElevenLabs connected) - 'Got it' reply not sent, emails blocked",
+    "2026-11-28T06:22+05:00 first render ok (41.3 s) but caption showed '13 million' instead of '1.3 million' (caption cleaner in tools/build_job.py dropped dots inside numbers). Small fix in tools/build_job.py (keep dots between digits), result.json removed, re-render started with the same fresh voice"
   ],
   "problem_email_sent": "elevenlabs",
   "problem_thread_id": "1a218a552687753b"
