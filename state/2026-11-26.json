@@ -23,9 +23,11 @@
         "science",
         "shorts"
       ],
-      "status": "rendering",
+      "status": "rendered",
       "style": "flat",
-      "voice_at": "2026-11-28T06:08+05:00"
+      "voice_at": "2026-11-28T06:08+05:00",
+      "url": "https://github.com/dogar5954786-ship-it/astrivo-shorts/releases/download/videos/2026-11-26-2.mp4",
+      "seconds": 41.3
     }
   ],
   "review_thread_id": null,
@@ -61,8 +63,10 @@
     "2026-11-27T23:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27 or problem threads. Problem email already sent - not repeated",
     "2026-11-28T05:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27/11-28 (thread 1a21f610240f3859) or problem threads. Problem email already sent - not repeated",
     "2026-11-28T06:08+05:00 ElevenLabs works again - voice made, job.draft.json -> job.json, pushed for render. Gmail and YouTube Zapier connections are missing this run (only ElevenLabs connected) - 'Got it' reply not sent, emails blocked",
-    "2026-11-28T06:22+05:00 first render ok (41.3 s) but caption showed '13 million' instead of '1.3 million' (caption cleaner in tools/build_job.py dropped dots inside numbers). Small fix in tools/build_job.py (keep dots between digits), result.json removed, re-render started with the same fresh voice"
+    "2026-11-28T06:22+05:00 first render ok (41.3 s) but caption showed '13 million' instead of '1.3 million' (caption cleaner in tools/build_job.py dropped dots inside numbers). Small fix in tools/build_job.py (keep dots between digits), result.json removed, re-render started with the same fresh voice",
+    "2026-11-28T06:30+05:00 re-render ok (41.3 s, caption 'hold 1.3 million'); real video frames checked (hook, 764, Sun) - ok. Review email NOT sent: Gmail (and YouTube) have no Zapier connection this run. Abdullah notified by push notification (problem_notice 'zapier_gmail_youtube') - send review email as soon as Gmail works again"
   ],
   "problem_email_sent": "elevenlabs",
-  "problem_thread_id": "1a218a552687753b"
+  "problem_thread_id": "1a218a552687753b",
+  "problem_notice": "zapier_gmail_youtube"
 }
