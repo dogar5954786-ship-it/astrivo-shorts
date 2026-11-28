@@ -23,8 +23,9 @@
         "science",
         "shorts"
       ],
-      "status": "waiting_voice",
-      "style": "flat"
+      "status": "rendering",
+      "style": "flat",
+      "voice_at": "2026-11-28T06:08+05:00"
     }
   ],
   "review_thread_id": null,
@@ -58,7 +59,8 @@
     "2026-11-27T21:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27 or problem threads. Problem email already sent - not repeated",
     "2026-11-27T22:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27 or problem threads. Problem email already sent - not repeated",
     "2026-11-27T23:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27 or problem threads. Problem email already sent - not repeated",
-    "2026-11-28T05:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27/11-28 (thread 1a21f610240f3859) or problem threads. Problem email already sent - not repeated"
+    "2026-11-28T05:10+05:00 ElevenLabs still fails ('The app returned None') for the full script; job stays waiting_voice. No replies in topics 11-26/11-27/11-28 (thread 1a21f610240f3859) or problem threads. Problem email already sent - not repeated",
+    "2026-11-28T06:08+05:00 ElevenLabs works again - voice made, job.draft.json -> job.json, pushed for render. Gmail and YouTube Zapier connections are missing this run (only ElevenLabs connected) - 'Got it' reply not sent, emails blocked"
   ],
   "problem_email_sent": "elevenlabs",
   "problem_thread_id": "1a218a552687753b"
